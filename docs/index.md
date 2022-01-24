@@ -8,3 +8,5 @@ tags:
 # Home
 
 Hi, I am TML104.
+
+`mkdocs gh-deploy`
