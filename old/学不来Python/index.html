@@ -1,0 +1,2361 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="TML104 的个人博客站">
+      
+      
+        <meta name="author" content="TML104">
+      
+      
+        <link rel="canonical" href="https://tml104.github.io/old/%E5%AD%A6%E4%B8%8D%E6%9D%A5Python/">
+      
+      <link rel="icon" href="../../assets/tml104.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.7">
+    
+    
+      
+        <title>学不来Python - TML104's BLOG</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.cd566b2a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:""}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="TML104&#39;s BLOG" class="md-header__button md-logo" aria-label="TML104's BLOG" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.19 2.25c.78.01 1.52.48 1.81 1.25l5 11.95c.09.26.14.55.13.8a2.02 2.02 0 0 1-1.23 1.8L9.53 21.1c-.26.12-.53.15-.79.15A2 2 0 0 1 6.93 20L1.97 8.05c-.42-1.01.07-2.18 1.09-2.6l7.36-3.05c.25-.09.51-.15.77-.15m3.48 0h1.45a2 2 0 0 1 2 2v6.35l-3.45-8.35m5.46 1.54 1.34.57a1.99 1.99 0 0 1 1.09 2.6l-2.43 5.86V3.79m-8.94.43L3.8 7.29 8.77 19.3l7.4-3.06-4.98-12.02M8.65 8.54l3.23 2.41-.44 4.01-3.23-2.42.44-4z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TML104's BLOG
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              学不来Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent=""  aria-label="关灯"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="关灯" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent=""  aria-label="开灯"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="开灯" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tml104/tml104.github.io/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tml104/tml104.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Git/" class="md-tabs__link md-tabs__link--active">
+        Old
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TML104&#39;s BLOG" class="md-nav__button md-logo" aria-label="TML104's BLOG" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.19 2.25c.78.01 1.52.48 1.81 1.25l5 11.95c.09.26.14.55.13.8a2.02 2.02 0 0 1-1.23 1.8L9.53 21.1c-.26.12-.53.15-.79.15A2 2 0 0 1 6.93 20L1.97 8.05c-.42-1.01.07-2.18 1.09-2.6l7.36-3.05c.25-.09.51-.15.77-.15m3.48 0h1.45a2 2 0 0 1 2 2v6.35l-3.45-8.35m5.46 1.54 1.34.57a1.99 1.99 0 0 1 1.09 2.6l-2.43 5.86V3.79m-8.94.43L3.8 7.29 8.77 19.3l7.4-3.06-4.98-12.02M8.65 8.54l3.23 2.41-.44 4.01-3.23-2.42.44-4z"/></svg>
+
+    </a>
+    TML104's BLOG
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tml104/tml104.github.io/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tml104/tml104.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Old
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Old" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Old
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Git/" class="md-nav__link">
+        Git常见操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OI%E6%9D%82%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        OI杂笔记
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          学不来Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        学不来Python
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一些前言
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%87%AA%E5%88%B6Template/" class="md-nav__link">
+        自制Template
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一些前言
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/tml104/tml104.github.io/docs/old/学不来Python.md" title="编辑此页" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="python">学不来Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h1>
+<h2 id="_1">一些前言<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>之所以下决心写这个系列，是因为这么长久以来我学Python都是在需要使用时临时参考的网上的教程，加上我自己以前并没有记录自己学习内容的习惯，因而导致我Python学的东西都相当零散且半吊子。因此我写这个系列主要也是要给自己学过的东西做一个归纳方便以后自己查阅。</p>
+<p>总所周知，Python的语法简单，因此被各种“机构”用来当做编程的入门语言。然而实际上如果没有接触过编程且不了解Python背后的一些机制的话，这门语言其实非常难学——它的坑太多了。这也是我学这门语言过程中的感悟，因此这个系列也是为了总结一下它的一些坑以免我以后再踩（当然也仅限于我的能力范围内了）。也因为这个原因，我决定给这个系列取名叫“学不来Python”。</p>
+<p>最后，我对我自己攥写文章的水平没多少自信，所以其实我写的东西不一定适合给别人看，甚至于说是当做“教程”——这个系列应该说是一个写给我自己看的“教程”，当然我会尽量把我想给自己看的内容写成其他人也能看懂的形式。这个系列也会参考一些网上比较有名的教程（比如liaoxuefeng和Python官网的教程），必要的时候也会给出参考链接。另外，由于我水平有限，这篇文章不会详细地说明这个语言中的每一个细节，更多的时候只是停留在“能用就行”的水平，文中所说的内容也未必100%准确，还请见谅。</p>
+<p>如果文中有错误无任欢迎指出。那么最后就请多指教了。</p>
+<h1 id="_2">基础语法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h2 id="python_1">基本概念和Python的特征<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h2>
+<p>Python是<strong>面向对象的语言</strong>：在Python中，任何的类型（如下文提到的数字、字符串）都是某种<strong>类</strong>。</p>
+<p><strong>类</strong>：一种抽象的类型，本质上是一种数据结构，它指代一类有详细定义的事物。例如，数学上的集合（一类事物）可以理解成一种类。人类也是一种类。</p>
+<p><strong>实例、对象</strong>：类中的某个特定的实体称为<strong>实例</strong>，也即<strong>对象</strong>。例如，某个集合{1,2,3}是集合的一个实例，另一个集合{5,6,7}又是集合的另一个实例。某个特定的人也可以理解为“人类”这个类的实例。</p>
+<p>当然数学上的集合本身不是数据结构，下文中会提到Python中的一种类型叫set，它就是数学集合在Python中的实现，是一种数据结构。</p>
+<p><strong>成员</strong>：一个类中包含的<strong>属性</strong>和<strong>方法</strong>统称为成员。</p>
+<p><strong>属性</strong>：描述了这个类的所有实例所拥有的属性有哪些。例如，（有限）集合拥有大小这个属性， {1,2}这个集合作为集合类的实例，大小这个属性的值是2。人类拥有身高这个属性，而某个特定的人身高是172cm就是这个特定的人在身高这个属性上的值。</p>
+<p><strong>方法</strong>：描述了这个类的所有实例所能做的操作（通常这些操作会和实例本身有关）有哪些。例如，集合类定义了取交集、并集、删除某元素等操作（这些操作就是方法），那么对于一个特定的集合｛1，2，3｝，它可以与另一个集合｛5，6，7｝取并集、交集从而得到另一个集合，也可以删除集合中某一特定元素得到另一个集合（例如删掉3就可以得到｛1，2｝）。</p>
+<p><strong>变量</strong>：绑定到某个特定实例的指针（在Python意义下）。例如令a=10，那么就说a指向了10。</p>
+<p><strong>函数</strong>：一系列已经封装好了的代码块，接受特定参数并执行（也即调用）后即可返回结果（当然也有可能只是运行而不返回结果）。</p>
+<p>Python是<strong>弱类型的语言</strong>：要定义变量，只需要给它赋值一个相应类型的对象实例即可。不需要特别指明其类型。</p>
+<p>Python依赖<strong>缩进</strong>区分代码块：优点是大多数时候不需要打花括号和分号来区分代码块和一行的结束，缺点就是Python对缩进的要求极其严格。</p>
+<h2 id="_3">基本数据类型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Python中有几种基本最常用的基本数据类型，它们的本质都是对象。下面会对这些类型做一些较为详细的说明。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>例子</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>整数（int）</td>
+<td>123</td>
+<td>高精度大整数</td>
+</tr>
+<tr>
+<td>浮点数（float）</td>
+<td>114.514,1.0,1e18</td>
+<td></td>
+</tr>
+<tr>
+<td>字符串（str）</td>
+<td>"TML104"</td>
+<td></td>
+</tr>
+<tr>
+<td>布尔值（bool）</td>
+<td>True,False</td>
+<td>以大写开头，只有两个合法的值</td>
+</tr>
+<tr>
+<td>复数</td>
+<td>1+2j</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">整数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h4 id="_5">十进制<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>一般地，随便输入某个十进制数就是整数了。但他们不能有多余的前导零。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="mi">123456</span>
+<span class="n">b</span><span class="o">=-</span><span class="mi">1123</span>
+<span class="n">c</span><span class="o">=</span><span class="mi">0</span>
+</code></pre></div>
+</td></tr></table>
+<p>当然你也可以用下划线分割数字，Python会认为他们是连在一起的。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="mi">114_514</span>
+</code></pre></div>
+</td></tr></table>
+<h4 id="_6">其他进制<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>在对应进制的数前加上“0b”、“0o”、“0x”，就可以以二、八、十进制表示别的整数。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="mb">0b11</span>
+<span class="n">b</span><span class="o">=-</span><span class="mh">0x3f</span>
+<span class="n">c</span><span class="o">=</span><span class="mo">0o12</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="_7">浮点数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>可以直观地理解：带有小数点的数就是浮点数。当然，你也可以用科学计数法来表示浮点数，形如“xey”，等价于<span class="arithmatex">\(x\cdot 10^y\)</span></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="mf">1.0</span>
+<span class="n">b</span><span class="o">=</span><span class="mf">3e9</span>
+<span class="n">c</span><span class="o">=</span><span class="mf">38e38</span>
+<span class="n">d</span><span class="o">=</span><span class="mf">1e-12</span>
+</code></pre></div>
+</td></tr></table>
+<p>这里<span class="arithmatex">\(b=3*10^9\)</span>，<span class="arithmatex">\(c=3.8*10^{39},d=1*10^{-12}\)</span>，但要注意他们都是浮点数。</p>
+<ul>
+<li>注意区分：1和1.0是<strong>两种不同类型的数</strong>，前者是整数（int）、后者是浮点数（float），下文中的除法运算会涉及到这点。</li>
+</ul>
+<p>如果小数以0.开头，那么可以省略掉0。下面的a等于-0.03。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=-</span><span class="mf">.03</span>
+</code></pre></div>
+</td></tr></table>
+<p>由于计算机保存浮点数的形式存在一定的“缺陷”导致运算可能会存在精度问题，因此能用整数的情况下尽量用整数。</p>
+<h3 id="_8">字符串<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>其实这玩意应该不算基本数据类型了……因为字符串事实上拥有一些高级特性，以后估计会开一节专门说明字符串，因此这里只是先提一嘴。</p>
+<p>使用一对半角单引号或双引号包裹的内容是单行字符串，使用三对半角单引号或双引号包裹的内容是多行字符串。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="s2">&quot;Hello,world&quot;</span>
+<span class="n">b</span><span class="o">=</span><span class="s1">&#39;&#39;&#39;R1</span>
+<span class="s1">R2</span>
+<span class="s1">R3</span>
+<span class="s1">&#39;&#39;&#39;</span>
+</code></pre></div>
+</td></tr></table>
+<p>注意赋值的时候多行字符串的开头三个引号必须要和变量同行，否则就会变成下文中的注释的写法了。</p>
+<h3 id="_9">布尔值<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>这个就没什么好说明的了。布尔值只有两种取值：True、False，注意不像C语言，这里它们开头首字母必须要大写。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="kc">True</span>
+<span class="n">b</span><span class="o">=</span><span class="kc">False</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="_10">复数<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>这个类型不怎么常用，这里只是提一下。用"a+bj"来构造一个复数，也可以用complex("a+bj")以字符串来构造复数。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="nb">complex</span><span class="p">(</span><span class="s2">&quot;1+2j&quot;</span><span class="p">)</span>
+<span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_11">变量和简单赋值<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>使用等于号来给变量赋值。上文中已经给出例子。</p>
+<p>你也可以同时对多个变量赋值，这样abc三个变量就都是10：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="n">b</span><span class="o">=</span><span class="n">c</span><span class="o">=</span><span class="mi">10</span>
+</code></pre></div>
+</td></tr></table>
+<p>python中的变量与其说是变量，不如说是某种“指针”——它的本质其实是指向对象的指针（也就是传递引用）。这个概念对理解后面的列表等可变类型会有帮助。</p>
+<h2 id="_12">删除<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>给变量a赋值后，可以用del语句删除变量a指向的对象，这样a就重新回到未定义的状态了。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">a</span>
+<span class="n">a</span> <span class="c1">#NameError: name &#39;a&#39; is not defined</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_13">基本运算<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p>下文中将会列出比较常用的运算，不会列出所有运算（因为太多了我自己都不会= =）。</p>
+<h3 id="_14">代数运算符运算<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>下文中示例等号右侧表示运算结果。</p>
+<p>除非有特殊说明，下表中符号皆为二元运算符，且浮点数、整数、布尔值均可参与运算
+$$
+\begin{array} {|}
+ \hline { 运算                 }&amp;{ 符号             }&amp;{ 特殊说明                                                     }&amp;{ 示例                                                         }\
+ \hline { 加法                 }&amp;{ +                }&amp;{ 对于列表、字符串等对象此符号有特殊用途                       }&amp;{ 1+2 =3\ [3]+[4] =[3,4]\ "13"+"222" ="13222"          }\
+ \hline { 减法                 }&amp;{ -                }&amp;{                                                              }&amp;{ 1-2 =-1                                                      }\
+ \hline { 乘法                 }&amp;{ <em>}&amp;{ 对于列表、字符串等对象此符号有特殊用途                       }&amp;{ 1</em>2 =2\ "13"<em>5 ="1313131313"\ [3,4]</em>2 =[3,4,3,4] }\
+ \hline { 整数除法（地板除法） }&amp;{ //               }&amp;{ 返回整数值（向下取整，也即负数方向取整）\除以0会抛出ZeroDivisionError异常 }&amp;{ 3//4 =0\ -3//4 =-1                                       }\
+ \hline { 浮点数除法           }&amp;{ /                }&amp;{ 返回浮点数值，除以0会抛出ZeroDivisionError异常               }&amp;{ 3//4 =0.75                                                   }\
+ \hline { 取模                 }&amp;{ \%                }&amp;{ a\%b的结果为a-(a//b)<em>b，除以0会抛出ZeroDivisionError异常;\对字符串对象有特殊用途（格式化字符串）;\注意：根据这个公式，你事实上可以对浮点数取模 }&amp;{ 4\%3
+=1\ 4\%-3 =-2\ -4\%3 =2\ -4\%-3 =-1\ 4.2\%3.0 =1.2000000000000002 }\
+ \hline { 乘方                 }&amp;{ pow(a,b) 或 a</em><em>b }&amp;{                                                              }&amp;{ 4</em><em>3 =64\ 2</em>*0.5 =1.4142135623730951                    }\\ \hline
+\end{array}\
+$$</p>
+<table>
+<thead>
+<tr>
+<th>运算</th>
+<th>符号</th>
+<th>特殊说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>加法</td>
+<td>+</td>
+<td>对于列表、字符串等对象此符号有特殊用途</td>
+<td>1+2 =3<br />[3]+[4] =[3,4]<br />"13"+"222" ="13222"</td>
+</tr>
+<tr>
+<td>减法</td>
+<td>-</td>
+<td></td>
+<td>1-2 =-1</td>
+</tr>
+<tr>
+<td>乘法</td>
+<td>*</td>
+<td>对于列表、字符串等对象此符号有特殊用途</td>
+<td>1<em>2 =2<br />"13"</em>5 ="1313131313"<br />[3,4]*2 =[3,4,3,4]</td>
+</tr>
+<tr>
+<td>整数除法（地板除法）</td>
+<td>//</td>
+<td>返回整数值（向下取整，也即负数方向取整），除以0会抛出ZeroDivisionError异常</td>
+<td>3//4 =0<br />-3//4 =-1</td>
+</tr>
+<tr>
+<td>浮点数除法</td>
+<td>/</td>
+<td>返回浮点数值，除以0会抛出ZeroDivisionError异常</td>
+<td>3//4 =0.75</td>
+</tr>
+<tr>
+<td>取模</td>
+<td>%</td>
+<td>a%b的结果为a-(a//b)*b，除以0会抛出ZeroDivisionError异常；对字符串对象有特殊用途（格式化字符串）；注意：根据这个公式，你事实上可以对浮点数取模</td>
+<td>4%3 =1<br />4%-3 =-2<br />-4%3 =2<br />-4%-3 =-1<br />4.2%3.0 =1.2000000000000002</td>
+</tr>
+<tr>
+<td>乘方</td>
+<td>pow(a,b) 或 a**b</td>
+<td></td>
+<td>4<strong>3 =64<br />2</strong>0.5 =1.4142135623730951</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_15">布尔逻辑运算<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>参与运算的通常是布尔值。</p>
+<table>
+<thead>
+<tr>
+<th>运算</th>
+<th>符号</th>
+<th>特殊说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>或</td>
+<td>a or y</td>
+<td></td>
+<td>True or False = True</td>
+</tr>
+<tr>
+<td>与</td>
+<td>a and b</td>
+<td></td>
+<td>True or False = False</td>
+</tr>
+<tr>
+<td>非</td>
+<td>not a</td>
+<td>单目运算符</td>
+<td>not False =True</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_16">比较运算<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>参与运算的通常是布尔值。当然，列表、元组、字符串等也可比较大小，但不等号两边一般得是同类型的对象。</p>
+<table>
+<thead>
+<tr>
+<th>运算</th>
+<th>符号</th>
+<th>特殊说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小于</td>
+<td>&lt;</td>
+<td>列表、元组、字符串：按字典序比较，下同</td>
+<td></td>
+</tr>
+<tr>
+<td>小于等于</td>
+<td>&lt;=</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>大于</td>
+<td>&gt;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>大于等于</td>
+<td>>=</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>等于</td>
+<td>==</td>
+<td>（通常是）判断两个对象的值是否相等，相等的定义对于不同的对象而言可能不同；特别地，由于浮点数精度问题，对浮点数使用此符号应当慎重</td>
+<td></td>
+</tr>
+<tr>
+<td>对象标识</td>
+<td>is</td>
+<td>两个对象是同一个对象（这里同一个对象的意思大致是他们的内存地址完全一样）时返回True，否则返回False</td>
+<td>1 is 1 =True<br />[1] is [1] =False</td>
+</tr>
+<tr>
+<td>否定对象标识</td>
+<td>is not</td>
+<td>上一条的否定形式</td>
+<td></td>
+</tr>
+<tr>
+<td>成员检测运算</td>
+<td>in 或 not in</td>
+<td>检测a是（不是）b的一个成员。（或者说a是否在b里）；特别地，对字典来说a是b的键时返回True</td>
+<td>3 in [1,3] =True<br />5 in [1,3] =False</td>
+</tr>
+</tbody>
+</table>
+<p>is的使用和对象的id有关，之后我们会详细说明。</p>
+<p>另外，python中还可以把几个比较符号连着写：<code>a&lt;x&lt;=b</code>，这种写法就结果而言等价于<code>a&lt;x and x&lt;=b</code>，但x的值只会求解一次。此外，<code>a&lt;x&gt;b</code>也等价于<code>a&lt;x and x&gt;b</code>，a和b之间不会进行比较。</p>
+<h3 id="_17">位运算<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>位运算通常在整数下进行。由于python中的整数是大整数，做下面的运算相当于对无穷个二进制补码位做运算（当然实际实现的时候不可能是这样，这么说只是方便理解）</p>
+<table>
+<thead>
+<tr>
+<th>运算</th>
+<th>符号</th>
+<th>特殊说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按位或</td>
+<td>|</td>
+<td></td>
+<td>-3 | -4 =-3</td>
+</tr>
+<tr>
+<td>按位与</td>
+<td>&amp;</td>
+<td></td>
+<td>-3&amp;-4 =1</td>
+</tr>
+<tr>
+<td>按位异或</td>
+<td>^</td>
+<td></td>
+<td>-3^-4 =1</td>
+</tr>
+<tr>
+<td>按位取反</td>
+<td>~a</td>
+<td>等价于返回-a-1</td>
+<td>~-3=2</td>
+</tr>
+<tr>
+<td>左移</td>
+<td>a&lt;&lt;b</td>
+<td>符号位不会移动，多出来的位用0填充；等价于乘以2的b次方</td>
+<td>22&lt;&lt;3 =176</td>
+</tr>
+<tr>
+<td>右移</td>
+<td>a&gt;&gt;b</td>
+<td>符号位不会移动，减少的位被舍去；等价于地板除以2的b次方</td>
+<td>22&gt;&gt;3 =2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_18">类型转换运算函数<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p>类型转换非常灵活，上文提到的基本数据类型几乎都可以相互转换，甚至可以直接把字符串转换成整数、浮点数、复数等。</p>
+<p>这些转换非常重要，输入数字需要依赖这些转换用的函数。</p>
+<table>
+<thead>
+<tr>
+<th>运算</th>
+<th>符号</th>
+<th>特殊说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>整数转换</td>
+<td>int(a)</td>
+<td>浮点数转换成小数时是向零取整</td>
+<td>int(-2.5) =-2</td>
+</tr>
+<tr>
+<td>浮点数转换</td>
+<td>float(a)</td>
+<td></td>
+<td>float(-1) =-1.0</td>
+</tr>
+<tr>
+<td>复数转换</td>
+<td>complex(re,im) 或 complex(string)</td>
+<td>re是实部、im是虚部；也可以直接用a+bj形式的字符串转换成复数</td>
+<td>complex(1,2)<br />complex("1+2j")</td>
+</tr>
+<tr>
+<td>字符串转换</td>
+<td>str(a)</td>
+<td></td>
+<td>str(12345) ="12345"</td>
+</tr>
+<tr>
+<td>布尔值转换</td>
+<td>bool(a)</td>
+<td>对整数来说，只要不是0，就返回True；对字符串来说，只要非空，就返回True；其他类型也可类推</td>
+<td>bool(-1) =True<br />bool(0)=False</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_19">基本函数运算<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>下面的运算理论上属于代数运算，但使用时形如调用函数（事实上他们本质上就是函数），因此单独列出。</p>
+<table>
+<thead>
+<tr>
+<th>运算</th>
+<th>符号</th>
+<th>特殊说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乘方</td>
+<td>pow(a,b) 或 a**b</td>
+<td>（上文已有详细说明）</td>
+<td></td>
+</tr>
+<tr>
+<td>绝对值</td>
+<td>abs(a)</td>
+<td></td>
+<td>abs(-3) =3</td>
+</tr>
+<tr>
+<td>带余除法</td>
+<td>divmod(a,b)</td>
+<td>返回二元组(a//b, a%b)</td>
+<td>div(4,3) =(1,1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_20">运算优先级<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p>参见：</p>
+<p><a href="https://docs.python.org/zh-cn/3/reference/expressions.html#operator-precedence">https://docs.python.org/zh-cn/3/reference/expressions.html#operator-precedence</a></p>
+<h2 id="_21">注释<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+<p>用#开头的一行代码表示注释。也可以用单独的多行字符串表示注释。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># note</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd"> other note</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</code></pre></div>
+</td></tr></table>
+<p>多行注释会在后文的函数中用到，起到类似于函数作用文档的作用。</p>
+<p>单行注释有时也有另一个作用。如果你在你的py文件开头加上这么一句注释：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># coding: utf-8</span>
+</code></pre></div>
+</td></tr></table>
+<p>那么整个文件将会被编码为utf-8后执行。</p>
+<p>你可能会觉得很不自然，因为一般印象中注释除了给人看以外就没什么别的用处了，但在这里它确实影响了程序的运行（你可以把上面的utf-8换成别的随便什么东西，然后运行的时候会报错）。事实上<a href="https://docs.python.org/3/reference/lexical_analysis.html#encoding-declarations">官方文档</a>把这种操作叫做Encoding declarations，它是通过正则表达式匹配<strong>前两行</strong>注释实现的，作用就是我们提到的改变编码。也就是说这种特殊的写法只对开头前两行注释有用。</p>
+<p>有没有别的类似写法可以使得注释改变运行的行为呢？据我所知也就只有这一个了，至于别的有没有……我也不知道（逃）</p>
+<p>另外我的写法并不是官方推荐的写法，如果真的要用可以参考官方文档（上文的链接已经给出）。</p>
+<h2 id="_22">控制台上的输入和输出<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h2>
+<p>在控制台输入输出，主要依靠input和print两个函数。</p>
+<h3 id="print">print<a class="headerlink" href="#print" title="Permanent link">&para;</a></h3>
+<p>可以直接输出数字、字符串等类型；print函数会把他们自动转换成字符串类型后输出；</p>
+<p>也可以用逗号分隔来同时输出多个内容，他们之间会用空格分隔。</p>
+<p>print默认以一个换行符(\n)结尾，可以改变print函数的<strong>end关键字参数</strong>为另一个字符串来改变结尾，例如将它改成一个空串end=''，就可以让它不换行。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="n">b</span><span class="o">=</span><span class="mi">15</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="s2">&quot;Yes&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="input">input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h3>
+<p>调用此函数后，将会在控制台读入<strong>一行</strong>键盘输入（不包括换行符号），并返回字符串。</p>
+<p>也可以给input传入一个字符串作为参数，这样在读入前会先输出一行字符串提示用户输入的内容。（大多数时候这个功能比较鸡肋用不上）</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;123</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>要想输入整数、浮点数，需要用上文提到的类型转换函数，以整数为例</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+</code></pre></div>
+</td></tr></table>
+<p>当然这样每次每行只能输入一个数。如果你希望每行输入若干个以空格分隔的数（例如三个），可以这么写：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+</code></pre></div>
+</td></tr></table>
+<p>input().split()将会把读入的字符串按照空格分隔成若干字符串，最后按顺序塞进一个列表中并返回改列表。map可以以一个函数作为参数(第一个参数)，将一个列表（第二个参数）中的每个元素输入到这个函数中，返回映射后的结果，最后再通过解包语法逐个赋值到a、b、c三个变量中。关于涉及到的列表、字符串方法等之后会详细说明。</p>
+<p>如果你想读入数量不定的整数序列（并得到一个列表），有两种写法：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">L1</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
+<span class="n">L2</span><span class="o">=</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+</code></pre></div>
+</td></tr></table>
+<p>第一种做法是通过将map对象通过list类型转换函数转换成列表后实现的（注意map这个函数返回的不直接是一个列表，而是一个map对象）。第二种做法用到了列表生成式的特性，之后会详细说明。</p>
+<h2 id="_23">杂项<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
+<h3 id="pass">pass<a class="headerlink" href="#pass" title="Permanent link">&para;</a></h3>
+<p>使用pass可以在本应输入代码的地方占位，其没有实际意义。例如你可以这么定义“空函数”：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">Func</span><span class="p">():</span>
+    <span class="k">pass</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="_24">分号<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<p>使用分号可以“压行”——将本来需要写成多行的代码写在一行</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="_25">反斜杠续行符<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<p>使用反斜杠可以将一行拆成若干行，但要注意反斜杠后面不能有别的东西。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span>\
+<span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
+<h1 id="_26">常用数据结构简介<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h1>
+<h2 id="_27">可变对象、不可变对象<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h2>
+<p><strong>不可变对象</strong>：对象一旦创建，对象中内容就不可再改变，只能用这个对象去创建另一个新的对象。如整数、字符串等。</p>
+<p><strong>可变对象</strong>：对象中的内容在创建后仍然是可变的。如列表、字典、集合。</p>
+<p>需要注意的是，整数的运算其实是在算完之后新建了一个整数对象，而不是在原有对象基础上修改值。字符串等也同理，字符串的拼接等操作实际上是新生成了另一个字符串对象。而对于可变对象而言就未必了，可能有些方法是改变原来对象的，可能有些是返回新对象的。</p>
+<p>要想看两个变量所指向的对象是不是<strong>同一个</strong>对象，可以使用id函数查看对象的地址。只有地址完全相同，两个对象才相同，这点已在之前对is的说明中提到。</p>
+<h2 id="_28">列表<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
+<p>列表类似于C中的vector，不过实际上它更接近广义表。</p>
+<ul>
+<li>列表是<strong>可变</strong>的：表可以自由地增加、删除元素，也可以改变列表中某个特定位置元素的值，长度不定。</li>
+<li>表中元素可以是任何对象（比如整数、浮点数、另一个列表等等），表中元素甚至可以是自己。</li>
+</ul>
+<h3 id="_29">新建列表<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="p">[]</span> <span class="c1">#空列表</span>
+<span class="n">b</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]]</span> <span class="c1">#有初始值的列表，最后一个元素是另一个列表，因此这个列表是嵌套的</span>
+<span class="n">c</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">)</span> <span class="c1">#使用其他可迭代对象构造新列表</span>
+</code></pre></div>
+</td></tr></table>
+<p>list函数是构造一个新列表用的函数。如果不传入参数那么将会返回空列表（因此<code>a=list()</code>和<code>a=[]</code>效果一样），如果传入了另一个可迭代对象（之后会提到），那么它会以可迭代对象中的每一个元素作为列表中的元素。</p>
+<p>关于列表的详细方法参见之后的“常用数据结构方法与相关常用函数”。</p>
+<h2 id="_30">元组<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h2>
+<p>与列表类似，但是，它的元素在初始化完成之后就不再可改变。</p>
+<ul>
+<li>元组是<strong>不可变的</strong>：不能删除或者添加元素。</li>
+<li>表中元素可以是任何对象。</li>
+</ul>
+<h3 id="_31">新建元组<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="p">()</span> <span class="c1">#空元组</span>
+<span class="n">b</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">],(</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="c1">#带有若干初始元素的元组</span>
+<span class="n">c</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="c1">#在没有歧义的情况下，等号右值省略括号也相当于元组</span>
+<span class="n">d</span><span class="o">=</span><span class="nb">tuple</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span> <span class="c1">#d==(1,2,3)</span>
+</code></pre></div>
+</td></tr></table>
+<p>tuple同样是用于构造一个新元组用的函数。</p>
+<h2 id="_32">列表和元组中的元素问题<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h2>
+<p>需要指出的是，“元组是不可变的”指的是元组中所包含的“内容”不能再更改了。但“内容”指的究竟是什么呢？</p>
+<p>之前的文章提到了在python中变量的本质实际上是指向对象的”指针“，因此，如果你是通过这个指针去改变了一个可变对象，那么所有指向这个对象的指针（也即变量）所指向的内容自然也会发生改变。例如：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="n">b</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c1">#在列表末尾插入新元素</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="c1">#[1, 2, 3, 4] [1, 2, 3, 4]</span>
+</code></pre></div>
+</td></tr></table>
+<p>可以看到，由于a和b指向的是同一个对象，因此对这个对象的操作会影响到所有指向这个对象的变量。</p>
+<p>再看一个嵌套列表的例子，这个列表最后一个元素是另一个列表，我们试图对最后这个列表插入元素：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">b</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]]</span>
+<span class="n">a</span><span class="o">=</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#取得指向[4,5,6]的变量（指针）</span>
+<span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c1">#[1,2,3,[4,5,6,4]]</span>
+</code></pre></div>
+</td></tr></table>
+<p>省略掉a变量依然能够成功：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">b</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]]</span>
+<span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c1">#[1,2,3,[4,5,6,4]]</span>
+</code></pre></div>
+</td></tr></table>
+<p>可以看到b中显示的内容也发生了改变。这说明了一个问题：<strong>列表中的另一个列表</strong>，实际上存的也是指向这个<strong>另一个列表的指针</strong>，或者说是一种<strong>引用</strong>，真正的这个另一个列表其实在另一个地方存着。只是在这里并没有一个明显的变量表明它是一个”引用“。</p>
+<p>如果把上例中的b改成元组而别的不变，那么去改变列表就会导致b指向的元组“看上去变了”，但实际上元组中存的是指向各个对象的指针，元组确实没有改变。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">b</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c1">#(1,2,3,[4,5,6,4])</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_33">集合<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h2>
+<p>类似数学上的集合，一个集合中的元素是唯一的。插入集合中已有的元素后，集合会自动合并重复的元素。</p>
+<ul>
+<li>
+<p>集合是<strong>可变的</strong>。</p>
+</li>
+<li>
+<p>Python中的集合底层是用哈希实现的，因此插入或初始化集合的对象必须要是<strong>可哈希的</strong>（hashable）。数、字符串、不包含可变对象的元组都是可哈希的，但可变对象（如列表）就不是。</p>
+</li>
+</ul>
+<h3 id="_34">新建集合<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">s</span><span class="o">=</span><span class="nb">set</span><span class="p">()</span>
+<span class="n">s</span><span class="o">=</span><span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span> <span class="c1">#有初值的初始化：{0,1,2,5,8}</span>
+</code></pre></div>
+</td></tr></table>
+<p>虽然集合形如{}，但是不能用{}新建一个空集合，因为这么写其实是在新建一个空字典。</p>
+<h2 id="_35">字典<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h2>
+<p>如果你接触过json或者C++的map的话你应该对字典很熟悉。字典保存了一系列键值对的集合，并可把键用类似于索引的方式取得值。</p>
+<ul>
+<li>字典是<strong>可变的</strong>。</li>
+<li><strong>键</strong>必须要是<strong>可哈希的</strong>，和集合类似。字典底层也是用哈希表实现的。</li>
+</ul>
+<h3 id="_36">新建字典<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">s</span><span class="o">=</span><span class="p">{}</span> <span class="c1">#空字典</span>
+<span class="n">s</span><span class="o">=</span><span class="nb">dict</span><span class="p">()</span> <span class="c1">#空字典</span>
+<span class="n">s</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;3&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,(</span><span class="mi">5</span><span class="p">):[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]}</span> <span class="c1">#带有整数、字符串和元组作为键的字典</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">s</span><span class="p">[</span><span class="s2">&quot;3&quot;</span><span class="p">]</span> <span class="c1">#按照索引取得值</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_37">字符串<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h2>
+<p>字符串之前已经提到过，这里</p>
+<ul>
+<li>字符串是<strong>不可变的</strong></li>
+</ul>
+<h3 id="_38">前缀<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r R</td>
+<td>原生字符串，不会转义</td>
+</tr>
+<tr>
+<td>f F</td>
+<td>格式字符串（参见格式化字符串一节）</td>
+</tr>
+<tr>
+<td>u U</td>
+<td>默认的前缀，表示以Unicode方式保存字符串</td>
+</tr>
+<tr>
+<td>b B</td>
+<td>生成bytes类型，其中只允许使用ascii字符，超出127的字符需要转义。序列中的每个值的大小被限制为 <code>0 &lt;= x &lt; 256</code> (如果违反此限制将引发 <a href="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError"><code>ValueError</code></a>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="iterableiterator">可迭代对象(Iterable)、迭代器（Iterator）<a class="headerlink" href="#iterableiterator" title="Permanent link">&para;</a></h2>
+<p><strong>可迭代对象</strong>：可被for循环（之后会提到）迭代的对象统称为可迭代对象。列表、字典、元组、集合、字符串等都是可迭代对象。</p>
+<p><strong>迭代器</strong>：</p>
+<h2 id="_39">浅拷贝、深拷贝<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h2>
+<h1 id="_40">常用数据结构方法与相关常用函数<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h1>
+<h2 id="_41">共通操作与方法<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h2>
+<p><strong>序列类型</strong>：列表、元组、range、字符串等</p>
+<h3 id="_42">通用操作<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h3>
+<p>几乎所有对象都能用，包括列表和元组、字典、集合、字符串等</p>
+<table>
+<thead>
+<tr>
+<th>运算、函数或方法</th>
+<th>符号</th>
+<th>特殊说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>成员检测运算</td>
+<td>a in b 或 a not in b</td>
+<td>见上文基本运算一节；特别地，对字典来说a是b的键时返回True</td>
+<td></td>
+</tr>
+<tr>
+<td>取得长度</td>
+<td>len(a)</td>
+<td>取得a对象的长度（元素个数）</td>
+<td></td>
+</tr>
+<tr>
+<td>最小值</td>
+<td>min(a)</td>
+<td>a中元素最小值</td>
+<td></td>
+</tr>
+<tr>
+<td>最大值</td>
+<td>max(a)</td>
+<td>a中元素最大值</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_43">序列通用操作<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h3>
+<p>除非有特殊说明，下面的操作可用于元组、列表、字符串。</p>
+<table>
+<thead>
+<tr>
+<th>运算、函数或方法</th>
+<th>符号</th>
+<th>特殊说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>串接</td>
+<td>a+b</td>
+<td>首尾相接，返回新对象</td>
+<td>[1,2]+[3,4] =[1,2,3,4]</td>
+</tr>
+<tr>
+<td>重复</td>
+<td>s*n (n是整数)</td>
+<td>重复n次自己对自己的串接，返回新对象；重复的元素将会引用被复制的对象</td>
+<td>"ab"*3="ababab"</td>
+</tr>
+<tr>
+<td>索引</td>
+<td>s[i]</td>
+<td>取s中第i个（自0开始计数）元素，可以为负数（相当于下标变为n-i）；越界访问会抛出IndexError异常</td>
+<td>"ab"[1] ="b"</td>
+</tr>
+<tr>
+<td>切片</td>
+<td>s[i:j]</td>
+<td>取s中第i到j个（不包括第j个）元素，步长为1；超出范围的i、j会被自动规约到0或len(s)；若i、j缺省会自动设定成0和len(s)</td>
+<td>“abcd”[2:4]="cd"</td>
+</tr>
+<tr>
+<td></td>
+<td>s[i:j:k]</td>
+<td>由满足x=i+nk的所有s[x]组成的序列，其中n是所有满足0&lt;=n&lt;(j-i)/k的整数；超出范围的i、j会被自动规约；缺省的i、j会被自动设定成开始或结束位置（取决于k的正负）</td>
+<td>"abcd"[1:4:2]="bd"<br />"abcd"[::-1]="dcba"<br /></td>
+</tr>
+<tr>
+<td>查找索引</td>
+<td>a.index(x)</td>
+<td>在a中找到第一次出现x的下标；找不到会抛出ValueError异常</td>
+<td>[2,3,5,4].index(3) =1</td>
+</tr>
+<tr>
+<td></td>
+<td>a.index(x,i,j)</td>
+<td>等价于在a[i:j]中找第一次出现x的对应的a的下标</td>
+<td>[2,3,5,4].index(3,1,2) =1</td>
+</tr>
+<tr>
+<td>计数</td>
+<td>a.count(x)</td>
+<td>返回x在a中出现次数</td>
+<td>[1,1,2,3,5].count(1)=2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>重复、切片等操作是浅拷贝</li>
+</ul>
+<h3 id="_44">可变序列通用操作<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h3>
+<p>就目前而言，主要是列表会用到这些独有的操作。其中有些操作其他可变类型（但不是可变序列类型）也可使用。</p>
+<table>
+<thead>
+<tr>
+<th>运算、函数或方法</th>
+<th>符号</th>
+<th>特殊说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>赋值</td>
+<td>a[i]=x<br />a[i:j]=x<br />a[i:j:k]=x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>删除</td>
+<td>del a[i]<br />del a[i:j]<br />del a[i:j:k]</td>
+<td>del操作还可以用在单独的对象上；<strong>字典可用左格当中的第一个操作</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>尾部插入</td>
+<td>a.append(x)</td>
+<td>在末尾插入新元素</td>
+<td></td>
+</tr>
+<tr>
+<td>清空</td>
+<td>a.clear()</td>
+<td><strong>字典、集合也可用</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>浅拷贝</td>
+<td>a.copy()</td>
+<td>就结果等于a[:]；<strong>字典、集合也可用</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>扩展</td>
+<td>a.extend(b)</td>
+<td>相当于用可迭代对象b转换成对应序列后再串接；就结果等于a+=b</td>
+<td>[1,2].extend((3,4))=[1,2,3,4]</td>
+</tr>
+<tr>
+<td>一般插入</td>
+<td>a.insert(i,x)</td>
+<td>在下标i之后插入x，之后的元素都向后移动一位</td>
+<td></td>
+</tr>
+<tr>
+<td>弹出</td>
+<td>a.pop([i])</td>
+<td>删掉第i个元素；如果省略i则默认删掉最后一个元素</td>
+<td></td>
+</tr>
+<tr>
+<td>移除</td>
+<td>a.remove(x)</td>
+<td>删掉第一个等于x的元素</td>
+<td></td>
+</tr>
+<tr>
+<td>反转</td>
+<td>a.reverse()</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_45">列表<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>运算、函数或方法</th>
+<th>符号</th>
+<th>特殊说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>通用操作</strong></td>
+<td></td>
+<td>（见上文）</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>序列通用操作</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>可变序列通用操作</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>构造</td>
+<td>list([iterable])</td>
+<td>可传入可迭代对象构造列表</td>
+<td></td>
+</tr>
+<tr>
+<td>排序</td>
+<td>a.sort([key=None, reverse=False])</td>
+<td>默认从小到大排序；将关键字参数reverse赋值为True可从大到小排序；key传入一个函数则可自定义比较规则</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>列表生成式特性见下文。</p>
+<h2 id="_46">元组<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>运算、函数或方法</th>
+<th>符号</th>
+<th>特殊说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>通用操作</strong></td>
+<td></td>
+<td>（见上文）</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>序列通用操作</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>构造</td>
+<td>tuple([iterable])</td>
+<td>可传入可迭代对象构造元组</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_47">集合<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h2>
+<p>集合允许一些简单的集合运算。</p>
+<table>
+<thead>
+<tr>
+<th>运算、函数或方法</th>
+<th>符号</th>
+<th>特殊说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>通用操作</strong></td>
+<td></td>
+<td>（见上文）</td>
+<td></td>
+</tr>
+<tr>
+<td>构造</td>
+<td>set([iterable])</td>
+<td>可传入可迭代对象构造集合，但其中的元素必须是可哈希的</td>
+<td></td>
+</tr>
+<tr>
+<td>浅拷贝</td>
+<td>s1.copy()</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>添加元素</td>
+<td>s1.add(x)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>删除元素</td>
+<td>s1.remove(x)</td>
+<td>不存在则抛出KeyError</td>
+<td></td>
+</tr>
+<tr>
+<td>移除元素</td>
+<td>s1.discard(x)</td>
+<td>不存在则什么也不做</td>
+<td></td>
+</tr>
+<tr>
+<td>弹出元素</td>
+<td>s1.pop()</td>
+<td>弹出"第一个元素"；空集合会抛出KeyError</td>
+<td></td>
+</tr>
+<tr>
+<td>清空</td>
+<td>s1.clear()</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>交集</td>
+<td>s1 &amp; s2 或者 s1.intersection(s2)</td>
+<td>返回两个集合的交集</td>
+<td></td>
+</tr>
+<tr>
+<td>并集</td>
+<td>s1 | s2 或者 s1.union(s2)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>对称差集（异或）</td>
+<td>s1 ^ s2 或者 s1.symmetric_difference(s2)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>差集</td>
+<td>s1 - s2 或者 s1.difference(s2)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>上面4条操作的更新版本</td>
+<td>s1 |= s2 , s1&amp;=s2, s1-=s2, s1^=s2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>子集判定</td>
+<td>s1 &lt;= s2 或 s1.issubset(s2)</td>
+<td>符合条件返回True，下同</td>
+<td></td>
+</tr>
+<tr>
+<td>真子集判定</td>
+<td>s1 &lt; s2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>超集判定</td>
+<td>s1&gt;=s2 或 s1.issuperset(s2)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>真超集判定</td>
+<td>s1 &gt; s2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>相交判定</td>
+<td>s1.isdisjoint(s2)</td>
+<td>交集空则返回True</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_48">字典<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h2>
+<p>下面会列出字典的常用方法（不是全部）</p>
+<table>
+<thead>
+<tr>
+<th>运算、函数或方法</th>
+<th>符号</th>
+<th>特殊说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>通用操作</strong></td>
+<td></td>
+<td>（见上文）</td>
+<td></td>
+</tr>
+<tr>
+<td>构造</td>
+<td>dict([(k1:w1),(k2:w2),...])<br />dict(k1=w1,k2=w2)</td>
+<td>可传入列表（列表中是若干两个值组成的元组）构造字典，也可传入关键字参数构造字典等。详细见官方文档</td>
+<td></td>
+</tr>
+<tr>
+<td>浅拷贝</td>
+<td>d.copy()</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>清空</td>
+<td>d.clear()</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>索引和赋值</td>
+<td>d[k]<br />d[k]=x</td>
+<td>k不存在时，相当于插入新的键值对；字典会确保自己的元素按照插入顺序排列</td>
+<td></td>
+</tr>
+<tr>
+<td>按键取值</td>
+<td>d.get(k,[def=None])</td>
+<td>返回这个键对应的值；如果指定了def参数则会在找不到k这个键的时候返回def，否则返回None</td>
+<td></td>
+</tr>
+<tr>
+<td>按键删除</td>
+<td>del d[k]</td>
+<td>找不到k这个键则抛出KeyError</td>
+<td></td>
+</tr>
+<tr>
+<td>按键删除2</td>
+<td>d.pop(k,[def=None])</td>
+<td>删除键值对并返回这个键对应的值；如果指定了def参数则会在找不到k这个键的时候返回def，否则会抛出KeyError</td>
+<td></td>
+</tr>
+<tr>
+<td>弹出元素</td>
+<td>d.popitem()</td>
+<td>弹出第一个键值对并返回之（以元组形式）</td>
+<td></td>
+</tr>
+<tr>
+<td>设置默认值</td>
+<td>d.setdefault(k,[def=None])</td>
+<td>字典中已存在k则返回d[k]，否则d[k]=def，并返回def的内容</td>
+<td></td>
+</tr>
+<tr>
+<td>更新</td>
+<td>d.update([dd]) 或 d |= dd （Py3.9）</td>
+<td>使用dd（字典或由若干两个值组成的元组构成的列表）更新d中的内容</td>
+<td></td>
+</tr>
+<tr>
+<td>合并（py3.9）</td>
+<td>d| dd</td>
+<td>dd是另一个字典，将创建两个字典合并的新字典。（以dd中的键值对优先）</td>
+<td></td>
+</tr>
+<tr>
+<td>视图对象</td>
+<td>d.items()<br />d.keys()<br />d.values()</td>
+<td>获取键值对、键、值的视图对象，主要用于迭代</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_49">字符串<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h2>
+<p>字符串的方法相当多，这里也只能列出比较常用的方法</p>
+<table>
+<thead>
+<tr>
+<th>运算、函数或方法</th>
+<th>符号</th>
+<th>特殊说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>通用操作</strong></td>
+<td></td>
+<td>（见上文）</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>序列通用操作</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>构造</td>
+<td>str([iterable])</td>
+<td>可传入可迭代对象构造字符串</td>
+<td></td>
+</tr>
+<tr>
+<td>计数</td>
+<td>s.count(s2,[st,ed])</td>
+<td>返回s2在s[st:ed]内的出现次数</td>
+<td>"abcdeeee".count("e",5,7)=2</td>
+</tr>
+<tr>
+<td>查找</td>
+<td>s.find(s2,[st,ed])</td>
+<td>返回s2在s[st:ed]内出现的最小下标;找不到则返回-1</td>
+<td>"abcdeee".find("e")=4</td>
+</tr>
+<tr>
+<td>反向查找</td>
+<td>s.rfind(s2,[st,ed])</td>
+<td>同上，但找的是最大下标</td>
+<td>"abcdeee".rfind("e")=6</td>
+</tr>
+<tr>
+<td>分隔</td>
+<td>s.partition(s2)</td>
+<td>在s中找到s2第一次出现的位置，并将s拆成s2前、s2和s2后三个串，返回这三者构成的元组（a，b，c）；如果没有找到s2则b、c将会是空串</td>
+<td>"abcdeee".partition("de") =('abc', 'de', 'ee')<br />"abcdeee".partition("k")=('abcdeee', '', '')</td>
+</tr>
+<tr>
+<td>拆分</td>
+<td>s.split(s1=None,maxsplit=-1)</td>
+<td>将字符串以s1位分隔符拆分成若干字符串并组成列表；（如果s1缺省则表明以任意长空格作为分隔符号）；指定maxsplit为正值则表明此拆分最多会进行这么多次</td>
+<td>"h e ll o".split()=['h', 'e', 'll', 'o']<br />"wawawawa".split("a",2)=['w', 'w', 'wawa']</td>
+</tr>
+<tr>
+<td>替换</td>
+<td>s.replace(s1,s2,[cnt])</td>
+<td>将s中出现的s1子串全部替换成s2；指明cnt表明最多进行cnt次替换</td>
+<td>'abcabcabc'.replace('abc','d',2)='ddabc'</td>
+</tr>
+<tr>
+<td>拼接</td>
+<td>s.join(L)</td>
+<td>以字符串s作为分隔符号，将可迭代对象L（元素必须全是字符串）中的所有元素串接</td>
+<td>'|'.join(["L","O","V","E"])="L|O|V|E"<br />''.join(["L","O","V","E"])="LOVE"</td>
+</tr>
+<tr>
+<td>小写化、大写化</td>
+<td>s.lower()<br />s.upper()</td>
+<td>将s转换为全小写或全大写</td>
+<td></td>
+</tr>
+<tr>
+<td>全小写、全大写判定</td>
+<td>s.islower()<br />s.isupper()</td>
+<td>s中的字母全是小写或大写则返回True</td>
+<td></td>
+</tr>
+<tr>
+<td>空格串判定</td>
+<td>s.isspace()</td>
+<td>s非空且全是空格，返回True</td>
+<td></td>
+</tr>
+<tr>
+<td>数字串判定</td>
+<td>s.isdigit()</td>
+<td>s全是阿拉伯数字，返回True</td>
+<td></td>
+</tr>
+<tr>
+<td>编码</td>
+<td>s.encode(encoding="utf-8")</td>
+<td>指定字符串s的编码，在写爬虫的时候可能有用；默认用utf-8编码</td>
+<td></td>
+</tr>
+<tr>
+<td>格式化</td>
+<td>s.format(...) 或 s1 % ...</td>
+<td>参见之后的格式化字符串</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>字符串的上述涉及查找子串的操作使用的算法是<a href="https://en.wikipedia.org/wiki/Boyer–Moore_string_search_algorithm">Boyer-Moore</a>，平均情况下复杂度为O（n），但最差情况下可达O（nm）</li>
+</ul>
+<h2 id="_50">其他特性<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h2>
+<h3 id="_51">推导式<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h3>
+<p>在创建列表、集合和字典时，可让列表以一定的规则生成其中的元素，以列表为例：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">L</span><span class="o">=</span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)]</span>
+</code></pre></div>
+</td></tr></table>
+<p>这个例子会把L=[1,2,3,4,5,6,7,8,9,10]。range函数会生成1到11-1=10共10个数字的序列，for循环会迭代这个类型，并将迭代到的元素（经过一些处理后）逐个作为L中的元素。</p>
+<p>更一般地，<strong>列表推导式的语法</strong>：（标准的巴科斯范式表示法见<a href="https://docs.python.org/zh-cn/3/reference/expressions.html#grammar-token-comp-for">https://docs.python.org/zh-cn/3/reference/expressions.html#grammar-token-comp-for</a>）</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">表达式</span> <span class="k">for</span> <span class="n">变量1</span> <span class="ow">in</span> <span class="n">可迭代对象</span> <span class="p">[</span><span class="k">if</span> <span class="n">条件</span><span class="p">]</span> <span class="k">for</span> <span class="n">变量2</span> <span class="ow">in</span> <span class="n">可迭代对象</span> <span class="p">[</span><span class="k">if</span> <span class="n">条件</span><span class="p">]</span> <span class="o">...</span>
+</code></pre></div>
+</td></tr></table>
+<p>变量1、2、...是在表达式中涉及到的变量。其中各个变量必须满足条件才会被考虑，不满足条件就会跳过。</p>
+<p>例如，下面的代码会生成[2,4,6,8]和[21,23,25,27,29]中元素两两相加的结果组成的列表：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="k">if</span> <span class="n">y</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1">#[23, 25, 27, 29, 31, 25, 27, 29, 31, 33, 27, 29, 31, 33, 35, 29, 31, 33, 35, 37]</span>
+</code></pre></div>
+</td></tr></table>
+<p>把前一个if条件拉到后面的if中，起到的效果是一样的</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="k">if</span> <span class="n">y</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1">#[23, 25, 27, 29, 31, 25, 27, 29, 31, 33, 27, 29, 31, 33, 35, 29, 31, 33, 35, 37]</span>
+</code></pre></div>
+</td></tr></table>
+<p>对<strong>集合</strong>而言，只需要把上面的框换成花括号就能变成集合推导式了：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="n">x</span><span class="o">+</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="k">if</span> <span class="n">y</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">}</span>
+<span class="c1">#{33, 35, 37, 23, 25, 27, 29, 31}</span>
+</code></pre></div>
+</td></tr></table>
+<p>对<strong>字典</strong>而言，表达式需要改成用引号分隔的两个表达式，需要注意的是一开始的键值对可能会被后来的覆盖：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="n">x</span><span class="o">-</span><span class="n">y</span><span class="p">:</span><span class="n">x</span><span class="o">+</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span> <span class="k">if</span> <span class="n">y</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">1</span><span class="p">}</span>
+<span class="c1">#{-19: 35, -21: 37, -23: 35, -25: 33, -27: 31, -17: 33, -15: 31, -13: 29}</span>
+</code></pre></div>
+</td></tr></table>
+<p><strong>总结一下就是：</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#列表、集合推导式</span>
+<span class="n">表达式</span> <span class="k">for</span> <span class="n">变量1</span> <span class="ow">in</span> <span class="n">可迭代对象</span> <span class="p">[</span><span class="k">if</span> <span class="n">条件</span><span class="p">]</span> <span class="k">for</span> <span class="n">变量2</span> <span class="ow">in</span> <span class="n">可迭代对象</span> <span class="p">[</span><span class="k">if</span> <span class="n">条件</span><span class="p">]</span> <span class="o">...</span>
+<span class="c1">#字典推导式</span>
+<span class="n">表达式1</span><span class="p">:</span><span class="n">表达式2</span> <span class="k">for</span> <span class="n">变量1</span> <span class="ow">in</span> <span class="n">可迭代对象</span> <span class="p">[</span><span class="k">if</span> <span class="n">条件</span><span class="p">]</span> <span class="k">for</span> <span class="n">变量2</span> <span class="ow">in</span> <span class="n">可迭代对象</span> <span class="p">[</span><span class="k">if</span> <span class="n">条件</span><span class="p">]</span> <span class="o">...</span>
+</code></pre></div>
+</td></tr></table>
+<p>当然上文中我们只讨论了三中类型的推导式。既然列表都有推导式了，那元组呢？元组事实上没有推导式这个说法，如果真的想要获得一个推导式推导出的元组，请先使用列表推导式，然后使用tuple函数转换成元组。</p>
+<p>简单地将推导式最外层的花括号或方括号换成圆括号，得到的将是生成器推导式而不再是元组，其行为也和序列对象不一样，因此以后我们再讨论它。</p>
+<h1 id="_52">常用函数总结<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h1>
+<p>这里将按用途类型把常用的内置函数（不包括内置模块里的函数）做划分。</p>
+<h2 id="_53">类型转换函数<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h2>
+<p>这些函数已经在前面的“基本数据类型”中提到，这里将只列出它们。</p>
+<h3 id="intxbase10-int">int(x,base=10) -&gt; int<a class="headerlink" href="#intxbase10-int" title="Permanent link">&para;</a></h3>
+<p>输入x，将x以base进制解析成10进制后返回整数.</p>
+<h3 id="floatx-float">float(x) -&gt;float<a class="headerlink" href="#floatx-float" title="Permanent link">&para;</a></h3>
+<h3 id="boolx-bool">bool(x) -&gt; bool<a class="headerlink" href="#boolx-bool" title="Permanent link">&para;</a></h3>
+<h3 id="complexx-complex">complex(x) -&gt; complex<a class="headerlink" href="#complexx-complex" title="Permanent link">&para;</a></h3>
+<h2 id="_54">常用数据结构构造函数<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h2>
+<p>这些函数已经在前面的“常用数据结构方法与相关常用函数”中提到，这里将只列出它们。</p>
+<h3 id="listiterable-list">list([iterable]) -&gt; list<a class="headerlink" href="#listiterable-list" title="Permanent link">&para;</a></h3>
+<h3 id="tupleiterable-tuple">tuple([iterable]) -&gt;tuple<a class="headerlink" href="#tupleiterable-tuple" title="Permanent link">&para;</a></h3>
+<h3 id="striterable-str">str([iterable]) -&gt; str<a class="headerlink" href="#striterable-str" title="Permanent link">&para;</a></h3>
+<h3 id="setiterable-set">set([iterable]) -&gt; set<a class="headerlink" href="#setiterable-set" title="Permanent link">&para;</a></h3>
+<h3 id="dict-dict">dict(...) -&gt; dict<a class="headerlink" href="#dict-dict" title="Permanent link">&para;</a></h3>
+<h2 id="_55">数学和进制转换<a class="headerlink" href="#_55" title="Permanent link">&para;</a></h2>
+<p>更多与数学有关的函数请参考math库中的函数。</p>
+<h3 id="absx">abs(x)<a class="headerlink" href="#absx" title="Permanent link">&para;</a></h3>
+<p>返回x的绝对值或模（复数）</p>
+<h3 id="maxxy-maxiterable">max(x,y,...) 或 max([iterable])<a class="headerlink" href="#maxxy-maxiterable" title="Permanent link">&para;</a></h3>
+<p>传入至少两个参数或者一个可迭代对象，将返回这些参数或这个对象中的（第一个）最大元素。</p>
+<h3 id="minxy-miniterable">min(x,y,...) 或 min([iterable])<a class="headerlink" href="#minxy-miniterable" title="Permanent link">&para;</a></h3>
+<p>同上，但返回（第一个）最小元素。</p>
+<h3 id="sumiterable">sum([iterable])<a class="headerlink" href="#sumiterable" title="Permanent link">&para;</a></h3>
+<p>传入可迭代对象，返回对象中所有元素的和</p>
+<h3 id="powabm">pow(a,b,[m])<a class="headerlink" href="#powabm" title="Permanent link">&para;</a></h3>
+<p>返回a的b次幂，如果指定了m（必须是整数），那么返回a的b次幂对m取余数的结果。</p>
+<p>py3.8中，b支持在传入m的情况下传入负数了，这意味着你可以直接用这个函数求一个数的模逆元。</p>
+<h3 id="divmodab">divmod(a,b)<a class="headerlink" href="#divmodab" title="Permanent link">&para;</a></h3>
+<p>带余除法，返回二元组(a//b, a%b)。</p>
+<h3 id="roundxd">round(x,[d])<a class="headerlink" href="#roundxd" title="Permanent link">&para;</a></h3>
+<p>将x四舍五入到d位小数，d未指定则表明四舍五入到整数。</p>
+<p>但要注意，由于浮点数精度问题，某些数值可能会在边界处产生反直觉的结果。例如</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">round</span><span class="p">(</span><span class="mf">4.5</span><span class="p">)</span> <span class="c1">#4</span>
+<span class="nb">round</span><span class="p">(</span><span class="mf">5.5</span><span class="p">)</span> <span class="c1">#6</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="hexx">hex(x)<a class="headerlink" href="#hexx" title="Permanent link">&para;</a></h3>
+<p>输入整数x，返回0x开头的16进制字符串。</p>
+<h3 id="octx">oct(x)<a class="headerlink" href="#octx" title="Permanent link">&para;</a></h3>
+<p>同上，返回0o开头的8进制字符串。</p>
+<h3 id="binx">bin(x)<a class="headerlink" href="#binx" title="Permanent link">&para;</a></h3>
+<p>同上，返回0b开头的2进制字符串。</p>
+<h2 id="_56">输入和输出<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h2>
+<h3 id="inputprompt">input([prompt])<a class="headerlink" href="#inputprompt" title="Permanent link">&para;</a></h3>
+<p>从标准输入读入一行字符串。指定prompt以在读入前输出一行提示。</p>
+<h3 id="printobj-sep-endn-filesysstdout-flushfase">print(*obj, sep=' ' , end='\n', file=sys.stdout, flush=Fase)<a class="headerlink" href="#printobj-sep-endn-filesysstdout-flushfase" title="Permanent link">&para;</a></h3>
+<p>输出若干个传入的obj参数，每个参数之间以sep分隔（默认是空格），输出完成后再输出一个end字符串（默认是换行）。</p>
+<p>指定file以规定输出到何处，默认是标准输出流。</p>
+<p>指定flush为True，则输出完成后将刷新输出流（立即将缓冲区的内容都输出到文件中）。</p>
+<h3 id="openf-moder">open(f, mode='r', ...)<a class="headerlink" href="#openf-moder" title="Permanent link">&para;</a></h3>
+<p>打开文件f并返回文件对象，利用这个文件对象可以向里面读写内容。</p>
+<p>mode指定'r'为读取，指定'w'为写入。在这之后追加写'b'、't'可以二进制模式（例如读写图片）或文本模式（默认）读写，追写'a'代表文件存在时在末尾追加读写等。具体说明参看官方文档。</p>
+<h2 id="_57">迭代相关函数<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h2>
+<h3 id="rangestedstep">range([st],ed,[step])<a class="headerlink" href="#rangestedstep" title="Permanent link">&para;</a></h3>
+<p>生成一个从st（默认为0）到ed（不包括ed），步长为step（默认为1）的range序列对象。通常用于for循环迭代。</p>
+<p>range对象是不可变的序列类型，也支持一些（但不是所有）序列操作：</p>
+<table>
+<thead>
+<tr>
+<th>运算、函数或方法</th>
+<th>符号</th>
+<th>特殊说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>通用操作</strong></td>
+<td></td>
+<td>（见上文）</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>序列通用操作</strong>(串接、重复除外)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>构造</td>
+<td>range(...)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>使用range对象迭代会比使用列表生成式生成的一串序列更高效。</p>
+<h3 id="iteriterable">iter(iterable)<a class="headerlink" href="#iteriterable" title="Permanent link">&para;</a></h3>
+<p>返回可迭代对象的一个迭代器（iterator）（从头开始）。</p>
+<h3 id="reversediterable">reversed(iterable)<a class="headerlink" href="#reversediterable" title="Permanent link">&para;</a></h3>
+<p>返回可迭代对象的反向迭代器（for循环时，将从L的尾部到头部迭代）</p>
+<h3 id="zipiterables">zip(*[iterables])<a class="headerlink" href="#zipiterables" title="Permanent link">&para;</a></h3>
+<p>同时迭代多个可迭代对象。当这当中最短的一个可迭代对象迭代完毕时，结束迭代。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
+<span class="c1">#1 3 6</span>
+<span class="c1">#2 4 7</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="enumerateiterable-start0">enumerate(iterable, start=0)<a class="headerlink" href="#enumerateiterable-start0" title="Permanent link">&para;</a></h3>
+<p>返回另一个可迭代对象，对象中的每一个元素以元组(i,v)表示，i表示其是第i个（从0开始计数）元素，v表示元素内容。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+<span class="c1">#0 7</span>
+<span class="c1">#1 8</span>
+<span class="c1">#2 9</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="nextiteratordef">next(iterator,[def])<a class="headerlink" href="#nextiteratordef" title="Permanent link">&para;</a></h3>
+<p>传入迭代器，返回迭代器所指元素并令迭代器移动到下一个位置。如果迭代完了会抛出StopIteration。</p>
+<h2 id="_58">字符<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h2>
+<h3 id="chrx">chr(x)<a class="headerlink" href="#chrx" title="Permanent link">&para;</a></h3>
+<p>x是整数，返回对应unicode值的单个字符的字符串。例如chr(65)='A'</p>
+<h3 id="ordx">ord(x)<a class="headerlink" href="#ordx" title="Permanent link">&para;</a></h3>
+<p>x是只有一个字符的字符串，返回字符对应的Unicode码。不是一个字符的字符串会抛出TypeError。</p>
+<h2 id="_59">排序<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h2>
+<h3 id="sortediterablekeynone-reversefalse">sorted([iterable],*,key=None, reverse=False)<a class="headerlink" href="#sortediterablekeynone-reversefalse" title="Permanent link">&para;</a></h3>
+<p>返回新的已排序的可迭代对象。</p>
+<p>指定key为函数可改变用于比较“大小”的规则。指定reverse为True可使其从大到小排列。更多请参考官方文档：<a href="https://docs.python.org/zh-cn/3/howto/sorting.html#sortinghowto">https://docs.python.org/zh-cn/3/howto/sorting.html#sortinghowto</a>。</p>
+<h2 id="_60">类型判定<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h2>
+<h3 id="isinstanceobjcls">isinstance(obj,cls)<a class="headerlink" href="#isinstanceobjcls" title="Permanent link">&para;</a></h3>
+<p>检测obj是否是cls这个类的一个实例。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">isinstance</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="nb">list</span><span class="p">)</span> <span class="c1">#True</span>
+<span class="kn">from</span> <span class="nn">collections.abc</span> <span class="kn">import</span> <span class="n">Iterable</span>
+<span class="nb">isinstance</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="n">Iterable</span><span class="p">)</span> <span class="c1">#True</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="typeobj">type(obj)<a class="headerlink" href="#typeobj" title="Permanent link">&para;</a></h3>
+<p>返回obj的类型（一个type对象）。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">type</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+<span class="c1"># &lt;class &#39;int&#39;&gt;</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_61">执行<a class="headerlink" href="#_61" title="Permanent link">&para;</a></h2>
+<h3 id="evalobj">eval(obj,...)<a class="headerlink" href="#evalobj" title="Permanent link">&para;</a></h3>
+<p>将obj（通常是字符串）当作python表达式运行，然后返回运行结果。有语法错误会抛出SyntaxError。</p>
+<h3 id="execobj">exec(obj, ...)<a class="headerlink" href="#execobj" title="Permanent link">&para;</a></h3>
+<p>将obj（通常是字符串）当作python代码执行。返回None。有语法错误会抛出SyntaxError。</p>
+<h1 id="_62">常用内置库函数总结<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h1>
+<h2 id="math">math<a class="headerlink" href="#math" title="Permanent link">&para;</a></h2>
+<p>Python的内置数学库</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="_63">浮点数<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h3>
+<h3 id="ceilx">ceil(x)<a class="headerlink" href="#ceilx" title="Permanent link">&para;</a></h3>
+<p>返回x的向上取整值</p>
+<h3 id="floorx">floor(x)<a class="headerlink" href="#floorx" title="Permanent link">&para;</a></h3>
+<p>返回x的向下取整值</p>
+<h3 id="iscloseabrel_tol1e-9abs_tol00">isclose(a,b,*,rel_tol=1e-9,abs_tol=0.0)<a class="headerlink" href="#iscloseabrel_tol1e-9abs_tol00" title="Permanent link">&para;</a></h3>
+<p>判断两个浮点数a、b是否足够相近，允许的误差为rel_tol。</p>
+<h3 id="fabsx">fabs(x)<a class="headerlink" href="#fabsx" title="Permanent link">&para;</a></h3>
+<p>x的绝对值（浮点数）</p>
+<h3 id="fmodxy">fmod(x,y)<a class="headerlink" href="#fmodxy" title="Permanent link">&para;</a></h3>
+<p>适用于浮点数的取模运算</p>
+<h3 id="_64">组合计数相关<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h3>
+<h3 id="combnk">comb(n,k)<a class="headerlink" href="#combnk" title="Permanent link">&para;</a></h3>
+<p>组合数<span class="arithmatex">\(C_{n}^k\)</span></p>
+<h3 id="factorialx">factorial(x)<a class="headerlink" href="#factorialx" title="Permanent link">&para;</a></h3>
+<p>返回x的阶乘，x需要是大于等于0的整数，否则会抛出异常。</p>
+<h3 id="permnknone">perm(n,k=None)<a class="headerlink" href="#permnknone" title="Permanent link">&para;</a></h3>
+<p>k&lt;=n，返回<span class="arithmatex">\(\frac{n!}{(n-k)!}\)</span>；否则返回0</p>
+<h3 id="_65">数论<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h3>
+<h3 id="gcdab-gcdints">gcd(a,b)  /  gcd(*ints)<a class="headerlink" href="#gcdab-gcdints" title="Permanent link">&para;</a></h3>
+<p>输入两个/若干（Py3.9）整数，返回这些数的最大公因数。特别地，输入的数全为0时，返回0。这和自己手写的gcd函数行为相同。</p>
+<h3 id="lcmints-py39">lcm(*ints) (Py3.9)<a class="headerlink" href="#lcmints-py39" title="Permanent link">&para;</a></h3>
+<p>输入若干整数，返回最小公倍数。</p>
+<h3 id="_66">求积与求和<a class="headerlink" href="#_66" title="Permanent link">&para;</a></h3>
+<h3 id="proditerablestart1">prod(iterable,*,start=1)<a class="headerlink" href="#proditerablestart1" title="Permanent link">&para;</a></h3>
+<p>求可迭代对象的积，初始值为start。</p>
+<h3 id="fsumiterable">fsum(iterable)<a class="headerlink" href="#fsumiterable" title="Permanent link">&para;</a></h3>
+<p>返回可迭代对象中的浮点值和（精确地）</p>
+<h3 id="_67">算数<a class="headerlink" href="#_67" title="Permanent link">&para;</a></h3>
+<h3 id="expx">exp(x)<a class="headerlink" href="#expx" title="Permanent link">&para;</a></h3>
+<p>指数函数</p>
+<h3 id="logxbase">log(x,[base])<a class="headerlink" href="#logxbase" title="Permanent link">&para;</a></h3>
+<p>以base为底数的x的对数</p>
+<h3 id="log2x-log10x">log2(x)  log10(x)<a class="headerlink" href="#log2x-log10x" title="Permanent link">&para;</a></h3>
+<p>类似上一函数</p>
+<h3 id="sqrtx">sqrt(x)<a class="headerlink" href="#sqrtx" title="Permanent link">&para;</a></h3>
+<p>算数平方根</p>
+<h3 id="isqrtx">isqrt(x)<a class="headerlink" href="#isqrtx" title="Permanent link">&para;</a></h3>
+<p>上一函数的向下取整值</p>
+<h3 id="sinx-cosx-tanx-asinx-acosx-atanx">sin(x) cos(x) tan(x) asin(x) acos(x) atan(x)<a class="headerlink" href="#sinx-cosx-tanx-asinx-acosx-atanx" title="Permanent link">&para;</a></h3>
+<p>三角函数</p>
+<h3 id="atan2yx">atan2(y,x)<a class="headerlink" href="#atan2yx" title="Permanent link">&para;</a></h3>
+<p>以弧度为单位返回atan(y/x)，结果在<span class="arithmatex">\([-\pi,\pi]\)</span>之间。</p>
+<h3 id="distpq">dist(p,q)<a class="headerlink" href="#distpq" title="Permanent link">&para;</a></h3>
+<p>p、q是可迭代对象，返回他们的欧几里得距离。</p>
+<h3 id="_68">常数<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h3>
+<h3 id="pi-e-tau2pi">pi e tau（2pi）<a class="headerlink" href="#pi-e-tau2pi" title="Permanent link">&para;</a></h3>
+<h2 id="cmath">cmath<a class="headerlink" href="#cmath" title="Permanent link">&para;</a></h2>
+<p>用于复数算数的库</p>
+<h3 id="phasex">phase（x）<a class="headerlink" href="#phasex" title="Permanent link">&para;</a></h3>
+<p>返回复数x的相位。[-pi,pi]之间</p>
+<h3 id="polarx">polar（x）<a class="headerlink" href="#polarx" title="Permanent link">&para;</a></h3>
+<p>返回复数x在极坐标系中的表示方式（二元组）</p>
+<h3 id="rectrphi">rect（r，phi）<a class="headerlink" href="#rectrphi" title="Permanent link">&para;</a></h3>
+<p>通过极坐标的半径和角度返回对应复数</p>
+<h2 id="random">random<a class="headerlink" href="#random" title="Permanent link">&para;</a></h2>
+<p>伪随机数库</p>
+<h3 id="_69">序列<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h3>
+<h3 id="choiceseq">choice（seq）<a class="headerlink" href="#choiceseq" title="Permanent link">&para;</a></h3>
+<p>从非空序列 <em>seq</em> 返回一个随机元素。</p>
+<h3 id="shufflexrandom">shuffle（x，[random]）<a class="headerlink" href="#shufflexrandom" title="Permanent link">&para;</a></h3>
+<p>将x按照random函数生成的值（[0.0,1.0)）随机打乱。</p>
+<h3 id="_70">随机数<a class="headerlink" href="#_70" title="Permanent link">&para;</a></h3>
+<h3 id="random_1">random()<a class="headerlink" href="#random_1" title="Permanent link">&para;</a></h3>
+<p>返回[0.0,1.0)内的随机数</p>
+<h3 id="uniformab">uniform（a，b）<a class="headerlink" href="#uniformab" title="Permanent link">&para;</a></h3>
+<p>返回a~b内的随机浮点数</p>
+<h3 id="randintab">randint（a，b）<a class="headerlink" href="#randintab" title="Permanent link">&para;</a></h3>
+<p>返回a~b内的随机整数</p>
+<h3 id="randrangested-step-randrangeed">randrange(st,ed, [step]) / randrange(ed)<a class="headerlink" href="#randrangested-step-randrangeed" title="Permanent link">&para;</a></h3>
+<p>参数形如range，返回这之中的一个数</p>
+<h2 id="statistics"><a href="https://docs.python.org/zh-cn/3/library/statistics.html#module-statistics"><code>statistics</code></a><a class="headerlink" href="#statistics" title="Permanent link">&para;</a></h2>
+<p>统计学函数。如无特殊说明，下文中函数参数为可迭代对象</p>
+<h3 id="meanx">mean（x）<a class="headerlink" href="#meanx" title="Permanent link">&para;</a></h3>
+<p>算数平均数</p>
+<h3 id="fmeanx">fmean（x）<a class="headerlink" href="#fmeanx" title="Permanent link">&para;</a></h3>
+<p>快速计算算数平均数（总是返回浮点数）</p>
+<h3 id="medianx-median_lowx-median_highx">median(x) / median_low(x) / median_high(x)<a class="headerlink" href="#medianx-median_lowx-median_highx" title="Permanent link">&para;</a></h3>
+<p>中位数/高中位数/低中位数</p>
+<h2 id="itertools">itertools<a class="headerlink" href="#itertools" title="Permanent link">&para;</a></h2>
+<p>包括各类用于迭代容器的函数</p>
+<h3 id="permutationsiterable-rnone"><code>permutations</code>(<em>iterable</em>, <em>r=None</em>)<a class="headerlink" href="#permutationsiterable-rnone" title="Permanent link">&para;</a></h3>
+<p>连续返回由 <em>iterable</em> 元素生成长度为 <em>r</em> 的排列（迭代器）。</p>
+<h3 id="combinationsiterable-r"><code>combinations</code>(<em>iterable</em>, <em>r</em>)<a class="headerlink" href="#combinationsiterable-r" title="Permanent link">&para;</a></h3>
+<p>返回由输入 <em>iterable</em> 中元素组成长度为 <em>r</em> 的子序列。</p>
+<h3 id="combinations_with_replacementiterable-r"><code>combinations_with_replacement</code>(<em>iterable</em>, <em>r</em>)<a class="headerlink" href="#combinations_with_replacementiterable-r" title="Permanent link">&para;</a></h3>
+<p>返回由输入 <em>iterable</em> 中元素组成的长度为 <em>r</em> 的子序列，允许每个元素可重复出现。</p>
+<h2 id="datetime">datetime<a class="headerlink" href="#datetime" title="Permanent link">&para;</a></h2>
+<h2 id="os">os<a class="headerlink" href="#os" title="Permanent link">&para;</a></h2>
+<h1 id="_71">字符串格式化<a class="headerlink" href="#_71" title="Permanent link">&para;</a></h1>
+<p><a href="https://docs.python.org/zh-cn/3/tutorial/inputoutput.html#formatted-string-literals">https://docs.python.org/zh-cn/3/tutorial/inputoutput.html#formatted-string-literals</a></p>
+<h2 id="sformatargs-kwargs">s.format(<em>args, </em>*kwargs)<a class="headerlink" href="#sformatargs-kwargs" title="Permanent link">&para;</a></h2>
+<p>格式化s中带有花括号的部分。</p>
+<ol>
+<li>*args ： 依次替换，或者根据花括号中的索引替换</li>
+<li>**kwargs：字典，根据花括号中的值作为键来替换</li>
+</ol>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="s2">&quot;The sum of 1 + 2 is </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_72">格式字符串语法<a class="headerlink" href="#_72" title="Permanent link">&para;</a></h2>
+<p>大概长这样：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span> <span class="p">[</span><span class="n">域名</span><span class="p">]</span> <span class="p">[</span><span class="err">!</span> <span class="n">转换旗标</span><span class="p">]</span> <span class="p">[:</span> <span class="n">格式控制符</span><span class="p">]</span> <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<ol>
+<li>
+<p>域名：如果为数字，则它指向一个位置参数，而如果为关键字，则它指向一个命名关键字参数。（省略则默认为位置参数从0递增）</p>
+</li>
+<li>
+<p>转换旗标：</p>
+</li>
+<li>
+<p>a：相当于在代入前套用一次ascii函数</p>
+</li>
+<li>s：相当于在代入前套用一次str函数（影响print的输出）</li>
+<li>
+<p>r：相当于在代入前套用一次repr函数（repr会影响对象在控制台的输出）</p>
+</li>
+<li>
+<p>常用的格式控制符（格式规格迷你语言）：</p>
+</li>
+</ol>
+<p><code>format_spec     ::=  [[fill]align][sign][#][0][width][grouping_option][.precision][type]</code></p>
+<ul>
+<li>填充fill：如果指定了一个有效的 <em>align</em> 值，则可以在该值前面加一个 <em>fill</em> 字符，它可以为任意字符，如果省略则默认为空格符。</li>
+<li>对齐选项align：&lt; &gt; = ^ 分别表示 左右对齐、强制将填充放置在符号（如果有）之后但在数字之前。这用于以“+000000120”形式打印字段、居中。</li>
+<li><em>width</em>：是一个定义最小总字段宽度的十进制整数，包括任何前缀、分隔符和其他格式化字符。 如果未指定，则字段宽度将由内容确定。</li>
+<li><em>precision</em>： 是一个十进制数字，表示对于以 <code>'f'</code> and <code>'F'</code> 格式化的浮点数值要在小数点后显示多少个数位，或者对于以 <code>'g'</code> 或 <code>'G'</code> 格式化的浮点数值要在小数点前后共显示多少个数位。</li>
+</ul>
+<p>一些使用例子</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="s1">&#39;X: </span><span class="si">{0[0]}</span><span class="s1">;  Y: </span><span class="si">{0[1]}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">coord</span><span class="p">)</span> <span class="c1">#coord=(3,5)</span>
+<span class="c1"># &#39;X: 3;  Y: 5&#39;</span>
+
+<span class="s1">&#39;</span><span class="si">{:&lt;30}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;left aligned&#39;</span><span class="p">)</span>
+<span class="c1"># &#39;left aligned                  &#39;</span>
+<span class="s1">&#39;</span><span class="si">{:^30}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;centered&#39;</span><span class="p">)</span>
+<span class="c1"># &#39;           centered           &#39;</span>
+<span class="s1">&#39;</span><span class="si">{:*^30}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;centered&#39;</span><span class="p">)</span>  <span class="c1"># use &#39;*&#39; as a fill char</span>
+<span class="c1">#&#39;***********centered***********&#39;</span>
+
+<span class="s1">&#39;Correct answers: </span><span class="si">{:.2%}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">points</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="c1"># &#39;Correct answers: 86.36%&#39;</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="f-string">f-string<a class="headerlink" href="#f-string" title="Permanent link">&para;</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">variable</span><span class="si">:</span><span class="s1"> format_spec</span><span class="si">}</span><span class="s1">&#39;</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_73">旧格式化方法<a class="headerlink" href="#_73" title="Permanent link">&para;</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> </span><span class="si">%5.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># &#39;1 2.000&#39;</span>
+</code></pre></div>
+</td></tr></table>
+<p>字符串后的百分号须是元组或字典。若是字典，字符串中的百分号应该写成<code>%(key)d</code>的形式。（而且字典键必须是字符串才行）</p>
+<p><a href="https://docs.python.org/zh-cn/3/library/stdtypes.html#old-string-formatting">https://docs.python.org/zh-cn/3/library/stdtypes.html#old-string-formatting</a></p>
+<h1 id="_74">解包<a class="headerlink" href="#_74" title="Permanent link">&para;</a></h1>
+<h1 id="id">（整数的）id<a class="headerlink" href="#id" title="Permanent link">&para;</a></h1>
+<h1 id="_75">条件判断和循环<a class="headerlink" href="#_75" title="Permanent link">&para;</a></h1>
+<h1 id="_76">第三方库<a class="headerlink" href="#_76" title="Permanent link">&para;</a></h1>
+<h2 id="request">Request<a class="headerlink" href="#request" title="Permanent link">&para;</a></h2>
+<h2 id="panda">Panda<a class="headerlink" href="#panda" title="Permanent link">&para;</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="dataframe">Dataframe<a class="headerlink" href="#dataframe" title="Permanent link">&para;</a></h3>
+<p>二维表格</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>df = pd.DataFrame(
+    {
+        &quot;Name&quot;: [
+            &quot;Braund, Mr. Owen Harris&quot;,
+            &quot;Allen, Mr. William Henry&quot;,
+            &quot;Bonnell, Miss. Elizabeth&quot;,
+        ],
+        &quot;Age&quot;: [22, 35, 58],
+        &quot;Sex&quot;: [&quot;male&quot;, &quot;male&quot;, &quot;female&quot;],
+    }
+)
+
+                       Name  Age     Sex
+0   Braund, Mr. Owen Harris   22    male
+1  Allen, Mr. William Henry   35    male
+2  Bonnell, Miss. Elizabeth   58  female
+</code></pre></div>
+</td></tr></table>
+<h3 id="series">Series<a class="headerlink" href="#series" title="Permanent link">&para;</a></h3>
+<p>每一列就是一个Series</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Age&quot;</span><span class="p">]</span>
+
+<span class="mi">0</span>    <span class="mi">22</span>
+<span class="mi">1</span>    <span class="mi">35</span>
+<span class="mi">2</span>    <span class="mi">58</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Age</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
+</code></pre></div>
+</td></tr></table>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">ages</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">22</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">58</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Age&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h1 id="conda">conda<a class="headerlink" href="#conda" title="Permanent link">&para;</a></h1>
+<h2 id="powershell">在powershell下运行<a class="headerlink" href="#powershell" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/conda/conda/issues/8428">https://github.com/conda/conda/issues/8428</a></p>
+<p><a href="https://blog.csdn.net/z_dmsd/article/details/107394983">https://blog.csdn.net/z_dmsd/article/details/107394983</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/89356758">https://zhuanlan.zhihu.com/p/89356758</a></p>
+<p>在powershell中运行请先</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>powershell -ExecutionPolicy Bypass
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+...
+conda init powershell
+...
+</code></pre></div>
+</td></tr></table>
+<h2 id="_77">清洁<a class="headerlink" href="#_77" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.jianshu.com/p/f14ac62bef99">https://www.jianshu.com/p/f14ac62bef99</a></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>conda clean -a
+</code></pre></div>
+</td></tr></table>
+<h2 id="_78">环境<a class="headerlink" href="#_78" title="Permanent link">&para;</a></h2>
+<p>创建环境、删除、激活和退出，安装包</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>conda create -n ngs python=3.8
+conda remove -n ngs --all
+conda activate ngs
+conda deactivate
+conda install package
+</code></pre></div>
+</td></tr></table>
+<h2 id="_79">常用命令<a class="headerlink" href="#_79" title="Permanent link">&para;</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code># to search for packages
+
+conda search [package]
+
+# To update all packages
+
+conda update --all --yes
+
+# List all packages installed
+
+conda list [-n env]
+
+# conda list environments
+
+conda env list
+
+# create new env
+
+conda create -n [name] package [package] ...
+
+# activate env
+
+conda activate [name]
+
+# deavtivate env
+
+conda deactivate
+
+# view conda configuration information
+
+conda --version
+
+conda info 
+
+conda info --envs
+</code></pre></div>
+</td></tr></table>
+<h1 id="pip">pip<a class="headerlink" href="#pip" title="Permanent link">&para;</a></h1>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pip --default-timeout<span class="o">=</span><span class="m">100</span> --no-cache-dir install matplotlib -i https://mirrors.aliyun.com/pypi/simple/
+</code></pre></div>
+</td></tr></table>
+<p>换源参考：<a href="https://blog.csdn.net/weixin_41524411/article/details/114191177">https://blog.csdn.net/weixin_41524411/article/details/114191177</a></p>
+<p>缓存：<a href="https://reality0ne.com/pip-cahce-dir/">https://reality0ne.com/pip-cahce-dir/</a></p>
+<p>缓存保存在当前用户home下的.cache中。要避免cache可以用--no-cache-dir</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="页脚">
+      
+        
+        <a href="../OI%E6%9D%82%E7%AC%94%E8%AE%B0/" class="md-footer__link md-footer__link--prev" aria-label="上一页: OI杂笔记" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              OI杂笔记
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../%E8%87%AA%E5%88%B6Template/" class="md-footer__link md-footer__link--next" aria-label="下一页: 自制Template" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              自制Template
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 TML104
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.01de222e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
