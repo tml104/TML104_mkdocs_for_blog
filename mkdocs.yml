@@ -11,11 +11,12 @@ edit_uri: 'https://github.com/tml104/tml104.github.io/docs'
 
 copyright: 'Copyright &copy; 2022 TML104'
 
-nav:
-  - HOME: 
-    - index.md
-  - ABOUT:
-    - About: about/about.md
+# nav:
+#   - HOME & ABOUT:
+#     - About: about.md
+#   - 旧md:
+#     - 
+#   - 
 
 
 theme: 
