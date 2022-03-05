@@ -1,8 +1,8 @@
-# pbds和其他
+## pbds和其他
 
 参考：https://oi-wiki.org/lang/pb-ds/
 
-## 平衡树
+### 平衡树
 
 参考：
 
@@ -12,7 +12,7 @@
 
 pbds中的平衡树与STL中的set类似，但支持查询下标等操作。
 
-### 头文件、命名空间
+#### 头文件、命名空间
 
 ```c++
 #include <ext/pb_ds/assoc_container.hpp>
@@ -22,7 +22,7 @@ pbds中的平衡树与STL中的set类似，但支持查询下标等操作。
 using namespace __gnu_pbds;
 ```
 
-### 定义
+#### 定义
 
 ```c++
 tree<pair<int ,int>,null_type,less<pair<int ,int> >,rb_tree_tag,tree_order_statistics_node_update> t;//红黑树
@@ -38,55 +38,55 @@ tree<pair<int ,int>,null_type,less<pair<int ,int> >,rb_tree_tag,tree_order_stati
 4. **树的类型**：一般用rb_tree_tag(红黑树)，其他还有splay_tree_tag（但据说容易T）
 5. **更新方式**：固定是tree_order_statistics_node_update
 
-### 常用方法
+#### 常用方法
 
-#### t.size()
+##### t.size()
 
 返回大小
 
-#### t.begin() t.end()
+##### t.begin() t.end()
 
 返回起始和末尾迭代器
 
-#### t.node_begin() t.node_end()
+##### t.node_begin() t.node_end()
 
 返回指向树根/树末尾的迭代器
 
-#### t.insert(x)
+##### t.insert(x)
 
 插入值，但插入重复的值不会造成任何影响。要想插入重复值，请将数据类型定义为pair并改变第二下标（推荐做法是第二下标就用i之类的独一无二的数来表示）。（似乎会返回一个很诡异的对象）
 
-#### t.erase(x) / t.erase(it)
+##### t.erase(x) / t.erase(it)
 
 删除值/指针指向的值。
 
-#### t.order_of_key(x)
+##### t.order_of_key(x)
 
 由值找下标（下标从0计数，下同），返回下标。如果x本来不存在于平衡树之中，那么返回第一个大于等于该值的元素的下标，特别地，如果x比任何元素都大，返回值与t.size()相等
 
-#### t.find_by_order(x)
+##### t.find_by_order(x)
 
 由值找对象，返回指向改值的指针。
 
-#### t.join(t2)
+##### t.join(t2)
 
 将同类型的树t2合并到t中，但如果t2和t有相同元素会甩出异常。
 
-#### t.split(v,t2)
+##### t.split(v,t2)
 
 将t中小于等于v的元素塞入b中，剩余元素留在t中。
 
-#### t.lower_bound(x)
+##### t.lower_bound(x)
 
 查找第一个大于等于x的元素，并返回指向它的指针。
 
-#### t.upper_bound(x)
+##### t.upper_bound(x)
 
 查找第一个大于x的元素，并返回指向它的指针。
 
 
 
-### 使用例子
+#### 使用例子
 
 > 2020CCPC Qinhuangdao E
 >
@@ -168,9 +168,9 @@ tree<pair<int ,int>,null_type,less<pair<int ,int> >,rb_tree_tag,tree_order_stati
 
 
 
-## 优先队列
+### 优先队列
 
-### 头文件、命名空间
+#### 头文件、命名空间
 
 ```c++
 #include<ext/pb_ds/priority_queue.hpp>
@@ -179,7 +179,7 @@ tree<pair<int ,int>,null_type,less<pair<int ,int> >,rb_tree_tag,tree_order_stati
 using namespace __gnu_pbds;
 ```
 
-### 定义
+#### 定义
 
 ```c++
 priority_queue<int,greater<int>,pairing_heap_tag> q;
@@ -206,35 +206,35 @@ priority_queue<int,greater<int>,pairing_heap_tag> q;
 
 4. **Allocator**：空间配置器
 
-### 常用方法
+#### 常用方法
 
-#### q.push(x)
+##### q.push(x)
 插入元素
 
-#### q.pop()
+##### q.pop()
 弹出堆顶元素
 
-#### q.top()
+##### q.top()
 堆顶元素
 
-#### q.size()
+##### q.size()
 大小
 
-#### q.empty()
+##### q.empty()
 判断是否为空
 
-#### q.modify(it,x)
+##### q.modify(it,x)
 修改迭代器指向位置的值为x
 
-#### q.erase(it)
+##### q.erase(it)
 删除迭代器it指向位置的值
 
-#### q.join(q2)
+##### q.join(q2)
 将q2堆中的内容合并到q中，并清空q2
 
 
 
-### 使用例子
+#### 使用例子
 
 HDU5575 Discover Water Tank 2015上海现场赛D题 （树形dp，并查集，左偏树）
 
@@ -490,18 +490,18 @@ int main()
 
 
 
-## rope
+### rope
 
 块状数组，时间复杂度$O(n\sqrt n)$
 
-### 头文件、命名空间
+#### 头文件、命名空间
 
 ```c++
 #include <ext/rope>
 using namespace __gnu_cxx;
 ```
 
-### 定义
+#### 定义
 
 ```c++
 rope<char> r;
@@ -511,37 +511,37 @@ rope<char> r;
 
 1. **数据类型**
 
-### 常用方法
+#### 常用方法
 
-#### r.insert(pos, s[], len)
+##### r.insert(pos, s[], len)
 
 在r的pos处插入长度为len的s
 
-#### r.append(s[], len)
+##### r.append(s[], len)
 
 在r的末尾处插入s长度为len的部分
 
-#### r.substr(pos, len)
+##### r.substr(pos, len)
 
 取得r的自pos开始长度为len的子序列（返回值仍为rope）
 
-#### r.at(index)
+##### r.at(index)
 
 访问下标index处的值
 
-#### r.erase(pos, len)
+##### r.erase(pos, len)
 
 删除pos开始长度为len的部分
 
-#### r.copy(pos, len, s[])
+##### r.copy(pos, len, s[])
 
 从rope的下标pos开始的len个数用数组s代替，如果pos后的位数不够就补足
 
-#### r.replace(pos, s[])
+##### r.replace(pos, s[])
 
 从rope的下标pos开始替换成数组s，s的长度为从pos开始替换的位数，如果pos后的位数不够就补足
 
-#### 使用例子
+##### 使用例子
 
 
 > P4008 [NOI2003] 文本编辑器
@@ -654,11 +654,11 @@ rope<char> r;
 > 
 
 
-# STL
+## STL
 
-## bitset
+### bitset
 
-### 头文件、定义
+#### 头文件、定义
 
 ```c++
 #include <bitset>
@@ -675,9 +675,9 @@ bitset<1000000> bs(s);
 
 接受数字、01字符串作为初始化参数。前面全用0补充。
 
-### 常用方法
+#### 常用方法
 
-#### 位运算操作符、相等与不等判断符
+##### 位运算操作符、相等与不等判断符
 
 包括`& | ~ ^ << >> == !=`，以及对应位运算操作符的自身操作符。
 
@@ -706,7 +706,7 @@ cout << (foo|bar) << endl;        // 0111 (按位或，不赋值)
 cout << (foo^bar) << endl;        // 0101 (按位异或，不赋值)
 ```
 
-#### 索引运算符
+##### 索引运算符
 
 可访问bitset中的位。位是从低到高存的。
 
@@ -719,53 +719,53 @@ cout << (foo^bar) << endl;        // 0101 (按位异或，不赋值)
 ```
 
 
-#### bs.count()
+##### bs.count()
 
 统计bs中1的个数
 
-#### bs.size()
+##### bs.size()
 
 bs的大小。
 
-#### bs.test(int x)
+##### bs.test(int x)
 
 等价于 `bs[x] == 1`
 
-#### bs.any()
+##### bs.any()
 
 bs中有1则为真
 
-#### bs.none()
+##### bs.none()
 
 bs中全0则为真
 
-#### bs.all()
+##### bs.all()
 
 bs中全1则为真
 
-#### bs.flip(int x)
+##### bs.flip(int x)
 
 反转bs的第x位（从0计数）
 
-#### bs.set()、bs.set(int x,[int val])
+##### bs.set()、bs.set(int x,[int val])
 
 将x处的值设为val。val缺省时设为1。参数全缺省时则全部置为一。
 
-#### bs.reset([int x])
+##### bs.reset([int x])
 
 将x处的值设为0。x缺省时全设为0。
 
-#### bs.to_string(), bs.to_ulong(), bs.to_ullong()
+##### bs.to_string(), bs.to_ulong(), bs.to_ullong()
 
 返回bs对应的string、unsigned long、unsigned longlong数。
 
 
-## list
+### list
 
 线性双向链表。
 https://blog.csdn.net/weixin_39115615/article/details/88768386
 
-### 头文件、定义
+#### 头文件、定义
 
 ```c++
 #include <list>
@@ -781,83 +781,83 @@ list<int> l2(2,100);
 **构造方法：**
 可用已存在数组或者指定初始值进行初始化。
 
-### 常用方法
+#### 常用方法
 
-#### l.begin(), l.end(), l.rbegin(), l.rend()
+##### l.begin(), l.end(), l.rbegin(), l.rend()
 
 返回对应的起始节点、结尾节点迭代器。
 
 当l为空时返回0.
 
-#### l.empty()
+##### l.empty()
 
 l为空时为真
 
-#### l.size(), l.max_size()
+##### l.size(), l.max_size()
 
 l的大小，最大可容纳大小
 
-#### l.front(), l.back()
+##### l.front(), l.back()
 
 返回l的首尾元素的值的引用
 
-#### l.assign(InputIterator first, InputIterator last)
+##### l.assign(InputIterator first, InputIterator last)
 
 使用起始、结束迭代器为l赋值。
 
-#### l.push_front(), l.push_back(), l.pop_front(), l.pop_back()
+##### l.push_front(), l.push_back(), l.pop_front(), l.pop_back()
 
 显然
 
-#### l.insert (iterator position, [size_type n] ,const value_type& val), l.insert (iterator position, InputIterator first, InputIterator last); 
+##### l.insert (iterator position, [size_type n] ,const value_type& val), l.insert (iterator position, InputIterator first, InputIterator last); 
 
 在position（l的迭代器）后插入值。指定了n时，指定插入多少个值。
 
 指定的是其他容器的首尾迭代器时，将这部分所有内容插入。
 
-#### l.erase(iterator position), l.erase (iterator first, iterator last)
+##### l.erase(iterator position), l.erase (iterator first, iterator last)
 
 移除l中对应迭代器处的元素
 
-#### l.swap(list &y)
+##### l.swap(list &y)
 
 交换l、y两个list
 
-#### l.clear()
+##### l.clear()
 
-#### l.splice (iterator position, list& x, [iterator first, [iterator last]])
+##### l.splice (iterator position, list& x, [iterator first, [iterator last]])
 
 将列表x中的所有元素移到当前list中，从当前列表的position指向的位置之后开始。x中对应内容被移除。
 
-#### l.remove(const value_type& val), l.remove_if(Predicate pred)
+##### l.remove(const value_type& val), l.remove_if(Predicate pred)
 
 从list中删除所有值为val的元素。pred可以是一个函数，也可以是一个class，但它需要有一个参数，且参数类型跟list中存储元素类型相同，满足条件就返回true
 
 
-#### l.unique([BinaryPredicate binary_pred])
+##### l.unique([BinaryPredicate binary_pred])
 
 只能删除相邻的重复元素，然后保留第一个值，因此这个函数只对排好序的list有用。
 
 binary_pred可以是函数，也可以是class，但它需要有两个参数，且类型跟list中存储的值类型相同，满足某个条件就返回true
 
 
-#### l.merge(list &x, [Compare comp])
+##### l.merge(list &x, [Compare comp])
 
 有序归并：将列表x中的元素按默认的顺序移入当前列表当中，此时列表x为空，当前列表仍为有序列表。注意调用时必须保证l,x的有序性。
 
 
-#### l.sort([Compare comp])
+##### l.sort([Compare comp])
 
 排序
 
-#### l.reverse()
+##### l.reverse()
 
 逆序
 
 
-## vector
+### vector
 
-### 定义与初始化
+#### 定义与初始化
 
 ```c++
 vector <int> a(10); //指定大小10，全初始化为0
@@ -867,21 +867,21 @@ vector <int> a(b) //使用其他
 
 ```
 
-### 常用方法
+#### 常用方法
 
-#### a.front(), a.back()
+##### a.front(), a.back()
 返回对应引用
 
-#### a.insert(VectorIterator it,value_type val), a.insert(VectorIterator it,int cnt,value_type val)
+##### a.insert(VectorIterator it,value_type val), a.insert(VectorIterator it,int cnt,value_type val)
 在it之后插入val，指定cnt时插入cnt个val
 
-#### a.capacity()
+##### a.capacity()
 返回a在内存中总共可以容纳的元素个数
 
-#### a.resize(uint size,[value_type val])
+##### a.resize(uint size,[value_type val])
 调整元素尺寸，如果多了则用val补充
 
-#### a.swap(vector b)
+##### a.swap(vector b)
 将a与b交换：(2021 牛客多校)
 ```c++
 void vec_del(vector<int>&x) {vector<int>t; t.clear();x.swap(t);}
@@ -891,7 +891,7 @@ vec_del(f);
 ```
 
 
-## string
+### string
 
 https://blog.csdn.net/yzl_rex/article/details/7839379
 
@@ -1107,18 +1107,18 @@ int main()
 ```
 
 
-# 有关STL的函数(std， algorithm)
+## 有关STL的函数(std， algorithm)
 
-## sort, reverse
+### sort, reverse
 
-## find(Iterator it1,Iterator it2,type val)
+### find(Iterator it1,Iterator it2,type val)
 返回val出现的第一个指针，如果没找到，返回尾指针
 
-## nth_number(RandomAccessIterator first, RandomAccessIterator nth,RandomAccessIterator last, [Compare comp])
+### nth_number(RandomAccessIterator first, RandomAccessIterator nth,RandomAccessIterator last, [Compare comp])
 
 保持nth迭代器对应位置的数就是整个序列的第n个数。其左边的数小于它，右边的数大于它。（注意在这之后nth指向的数就可能变了）
 
-## lower_bound / upper_bound (ForwardIterator first, ForwardIterator last, const T& val, [Compare comp]);
+### lower_bound / upper_bound (ForwardIterator first, ForwardIterator last, const T& val, [Compare comp]);
 
 返回第一个大于等于（upperbound对应的是大于）val的指针。如果全不符合，返回last。
 
@@ -1143,7 +1143,7 @@ template <class ForwardIterator, class T>
 // http://www.cplusplus.com/reference/algorithm/lower_bound/
 ```
 
-## bool next_permutation (ForwardIterator first, ForwardIterator last)
+### bool next_permutation (ForwardIterator first, ForwardIterator last)
 
 使得first到last之间的序列变为下一个全排列
 
