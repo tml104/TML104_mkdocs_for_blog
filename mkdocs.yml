@@ -7,7 +7,7 @@ site_url: https://tml104.github.io
 # Repository
 repo_name: 'tml104/tml104.github.io'
 repo_url: 'https://github.com/tml104/tml104.github.io'
-edit_uri: 'https://github.com/tml104/tml104.github.io/docs'
+edit_uri: 'https://github.com/tml104/tml104.github.io/tree/main/docs'
 
 copyright: 'Copyright &copy; 2022 TML104'
 
