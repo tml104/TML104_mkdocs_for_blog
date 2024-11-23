@@ -1,0 +1,2851 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="TML104 的个人博客站">
+      
+      
+        <meta name="author" content="TML104">
+      
+      
+        <link rel="canonical" href="https://tml104.github.io/%E6%97%A7md%28%E8%87%AA%E7%94%A8%29/1-1%20%E9%9A%8F%E6%9C%BA%E8%AF%95%E9%AA%8C/">
+      
+      
+        <link rel="prev" href="../../%E5%AD%A6%E4%B8%8D%E6%9D%A5/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%88%99/">
+      
+      
+        <link rel="next" href="../Git/">
+      
+      
+      <link rel="icon" href="../../assets/tml104.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>1 1 随机试验 - TML104's BLOG</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="TML104&#39;s BLOG" class="md-header__button md-logo" aria-label="TML104's BLOG" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.19 2.25c.78.01 1.52.48 1.81 1.25l5 11.95c.09.26.14.55.13.8a2.02 2.02 0 0 1-1.23 1.8L9.53 21.1c-.26.12-.53.15-.79.15A2 2 0 0 1 6.93 20L1.97 8.05c-.42-1.01.07-2.18 1.09-2.6l7.36-3.05c.25-.09.51-.15.77-.15m3.48 0h1.45a2 2 0 0 1 2 2v6.35zm5.46 1.54 1.34.57a1.99 1.99 0 0 1 1.09 2.6l-2.43 5.86zm-8.94.43L3.8 7.29 8.77 19.3l7.4-3.06zM8.65 8.54l3.23 2.41-.44 4.01-3.23-2.42z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TML104's BLOG
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1 1 随机试验
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="indigo"  aria-label="关灯"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="关灯" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="indigo"  aria-label="开灯"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="开灯" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tml104/tml104.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tml104/tml104.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../2024%E8%85%BE%E8%AE%AF%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AD%A6%E5%A0%82/%E4%BD%9C%E4%B8%9A1%20-%20%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91UE5%20145d3bc8971f80f88e12d993a266d2ce/" class="md-tabs__link">
+          
+  
+    
+  
+  2024腾讯客户端学堂
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E5%AD%A6%E4%B8%8D%E6%9D%A5/C%2B%2B/Const/" class="md-tabs__link">
+          
+  
+    
+  
+  学不来
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  旧md(自用)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E8%A1%A5%E9%A2%98%E8%AE%B0%E5%BD%95/%E5%BE%AE%E8%BD%AF%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E7%AC%94%E8%AF%95/" class="md-tabs__link">
+          
+  
+    
+  
+  算法竞赛补题记录
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TML104&#39;s BLOG" class="md-nav__button md-logo" aria-label="TML104's BLOG" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.19 2.25c.78.01 1.52.48 1.81 1.25l5 11.95c.09.26.14.55.13.8a2.02 2.02 0 0 1-1.23 1.8L9.53 21.1c-.26.12-.53.15-.79.15A2 2 0 0 1 6.93 20L1.97 8.05c-.42-1.01.07-2.18 1.09-2.6l7.36-3.05c.25-.09.51-.15.77-.15m3.48 0h1.45a2 2 0 0 1 2 2v6.35zm5.46 1.54 1.34.57a1.99 1.99 0 0 1 1.09 2.6l-2.43 5.86zm-8.94.43L3.8 7.29 8.77 19.3l7.4-3.06zM8.65 8.54l3.23 2.41-.44 4.01-3.23-2.42z"/></svg>
+
+    </a>
+    TML104's BLOG
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tml104/tml104.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tml104/tml104.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024腾讯客户端学堂
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            2024腾讯客户端学堂
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2024%E8%85%BE%E8%AE%AF%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AD%A6%E5%A0%82/%E4%BD%9C%E4%B8%9A1%20-%20%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91UE5%20145d3bc8971f80f88e12d993a266d2ce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    作业1 - 源码编译UE5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    学不来
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            学不来
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B8%8D%E6%9D%A5/C%2B%2B/Const/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Const
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B8%8D%E6%9D%A5/C%2B%2B/Tuple/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tuple
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B8%8D%E6%9D%A5/C%2B%2B/%E5%88%9D%E5%A7%8B%E5%8C%96%EF%BC%8C%E5%A3%B0%E6%98%8E%EF%BC%8C%E5%AE%9A%E4%B9%89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    初始化，声明，定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B8%8D%E6%9D%A5/C%2B%2B/%E6%9D%82%E9%A1%B9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    杂项
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B8%8D%E6%9D%A5/C%2B%2B/%E8%87%AA%E5%A2%9E%E7%AC%A6%E5%8F%B7%28%2B%2B%29%E5%92%8C%E5%B7%A6%E5%8F%B3%E5%80%BC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自增符号(++)和左右值
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    EasyRL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            EasyRL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B8%8D%E6%9D%A5/EasyRL/C1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B8%8D%E6%9D%A5/EasyRL/C2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GAMES104
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            GAMES104
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B8%8D%E6%9D%A5/GAMES104/L16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L16
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B8%8D%E6%9D%A5/GAMES104/L18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L18
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GAMES105
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            GAMES105
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B8%8D%E6%9D%A5/GAMES105/L1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B8%8D%E6%9D%A5/GAMES105/L2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    设计模式
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            设计模式
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B8%8D%E6%9D%A5/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%88%99/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    原则
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    旧md(自用)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            旧md(自用)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1 1 随机试验
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git常见操作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OI%E6%9D%82%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OI杂笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STL%E6%95%B4%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    STL整理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AD%A6%E4%B8%8D%E6%9D%A5Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    学不来Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%87%AA%E5%88%B6Template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自制Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    算法竞赛补题记录
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            算法竞赛补题记录
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E8%A1%A5%E9%A2%98%E8%AE%B0%E5%BD%95/%E5%BE%AE%E8%BD%AF%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E7%AC%94%E8%AF%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    微软暑期实习笔试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Codeforces
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Codeforces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E8%A1%A5%E9%A2%98%E8%AE%B0%E5%BD%95/Codeforces/CF766/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CF766
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E8%A1%A5%E9%A2%98%E8%AE%B0%E5%BD%95/Codeforces/CF767/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CF767
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E8%A1%A5%E9%A2%98%E8%AE%B0%E5%BD%95/Codeforces/CFED121/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CFED121
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<blockquote>
+<p>高斯积分：
+$$
+\int_{-\infty}^\infty e<sup>{-\frac{x</sup>2}2}dx=\sqrt{2\pi}\
+\int_{-\infty}^\infty e<sup>{-{x</sup>2}}dx=\sqrt{\pi}\
+\int_{-\infty}^\infty e<sup>{a(x+b)</sup>2}dx=\sqrt{\frac{\pi}a}\
+\int_0^\infty x<sup>{2n}e</sup>{-\alpha x<sup n_1="n+1">2}dx=\frac{(2n-1)!!}{2</sup>\
+\int_0^\infty x}\alpha^n}\sqrt{\frac\pi a<sup>{2n+1}e</sup>{-\alpha x<sup n_1="n+1">2}dx=\frac{n!}{2\alpha</sup>
+$$
+}</p>
+</blockquote>
+<p>P19 例题5\6
+P71
+卡方分布相关问题
+6、7章的证明题</p>
+<h1 id="1-1">1-1 随机试验<a class="headerlink" href="#1-1" title="Permanent link">&para;</a></h1>
+<ul>
+<li>可在相同条件下重复进行</li>
+<li>每次试验的可能结果不止一种，能够事先明确试验的所有可能结果</li>
+<li>进行一次试验之前不能确定哪一个结果会出现</li>
+</ul>
+<h1 id="1-2">1-2 样本空间、随机事件<a class="headerlink" href="#1-2" title="Permanent link">&para;</a></h1>
+<h2 id="_1">样本空间<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>样本空间（S）：</strong>随机试验E的所有可能结果的集合</p>
+<p><strong>样本点：</strong>E的每个结果，样本空间的元素</p>
+<h2 id="_2">随机事件<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><strong>随机事件</strong>：E的样本空间S的子集</p>
+<p><strong>基本事件：</strong>由一个样本点组成单点集</p>
+<p><strong>事件发生</strong>：子集中的样本点出现</p>
+<p><strong>必然事件</strong>：事件包含所有的基本事件（样本空间的点）</p>
+<p><strong>不可能事件</strong>：不包含任何基本事件（样本空间的点）</p>
+<h2 id="_3">事件的关系与运算<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><strong>包含关系</strong>：A发生必然导致B发生
+$$
+A\subset B
+$$
+对任何事件都有
+$$
+S\supset A\supset \emptyset
+$$
+<strong>和事件</strong>：事件A、B至少有一个发生所构成的事件
+$$
+\bigcup_{i=1}^nA_i \
+\bigcup_{i=1}^\infty A_i
+$$
+<strong>积事件</strong>：A、B同时发生所构成的事件
+$$
+\bigcap_{i=1}^nA_i
+$$
+<strong>互斥事件</strong>：A、B不能同时发生
+$$
+AB=\emptyset
+$$</p>
+<ul>
+<li>基本事件两两互不相容</li>
+<li>A并B=A+B</li>
+</ul>
+<p><strong>对立事件</strong>：一次试验中A、B必然有其中一个发生，且只发生其中一个
+$$
+\overline A=S-A
+$$</p>
+<p><strong>差事件</strong>：A发生，B不发生，记为A-B
+$$
+A-B=A-AB
+$$</p>
+<h1 id="1-3">1-3 频率、概率<a class="headerlink" href="#1-3" title="Permanent link">&para;</a></h1>
+<h2 id="_4">频率<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>n次试验中，事件A发生的次数nA称为事件A发生频数。
+$$
+f_n(A)=\frac {n_A}{n}
+$$
+<strong>基本性质</strong>：
+$$
+0\le f_n(A) \le1 \
+f_n(S)=1 \
+f_n(A_1\cup\dots\cup A_k)=f_n(A_1)+\dots+f_n(A_k)
+$$</p>
+<p>A1...An两两互斥</p>
+<h2 id="_5">概率<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>E是随机试验，S是样本空间。集合函数P满足：</p>
+<p>1.非负性：对于任何事件A
+$$
+P(A)\ge 0
+$$
+2.规范性：对于必然事件S
+$$
+P(S)=1
+$$
+3.可列可加性：A1、...两两互斥
+$$
+P(A_1\cup\dots)=P(A_1)+\dots
+$$</p>
+<p><strong>性质</strong>：</p>
+<p>1.
+$$
+P(\emptyset)=0
+$$
+2.有限可加性：A1、...、An是两两互斥事件
+$$
+P(A_1\cup\dots\cup A_n)=P(A_1)+\dots+P(A_n)
+$$
+3.
+$$
+A\subset B \Rightarrow \
+P(B-A)=P(B)-P(A) \
+P(B)\ge P(A)
+$$
+4.对于任何一个事件A，
+$$
+P(A)\leq1
+$$
+5.逆事件概率
+$$
+P(\overline A)=1-P(A)
+$$
+6.加法公式（基于容斥原理）
+$$
+P(A\cup B)=P(A)+P(B)-P(AB)
+$$</p>
+<h1 id="1-4">1-4 等可能概型（古典概型）<a class="headerlink" href="#1-4" title="Permanent link">&para;</a></h1>
+<h2 id="_6">定义<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>1.基本事件的发生概率相同</p>
+<p>2.样本空间有有限多个点
+$$
+P({e_1})=...=P({e_n}) \
+P(A)=\sum_{j=1}^kP({e_{i_j}})=\frac kn
+$$</p>
+<h2 id="_7">计算<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>组合计数</p>
+<h1 id="1-5">1-5 条件概率<a class="headerlink" href="#1-5" title="Permanent link">&para;</a></h1>
+<h2 id="_8">条件概率<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>乘法原理
+$$
+P(A|B)=\frac{P(AB)}{P(B)} \
+乘法公式： P(AB)=P(B)\cdot P(A|B)
+$$</p>
+<p><strong>性质</strong>：</p>
+<p>1.非负性：
+$$
+P(B|A)\ge0
+$$
+2.规范性：
+$$
+P(S|A)=1
+$$
+3.可列可加性：B1...Bn两两互斥
+$$
+P(\bigcup_{i=1}^\infty B_i|A)=\sum_{i=1}^\infty P(B_i|A)
+$$</p>
+<p><strong>扩展</strong>：</p>
+<p>多个事件的乘法原理
+$$
+P(ABC)=P(C|AB)P(B|A)P(A)\
+P(A_1\dots A_n)=P(A_n|A_1\dots A_{n-1})\dots
+$$</p>
+<h2 id="_9">全概率公式<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>B1、B2、...、Bn是样本空间S的一个划分（背景事件），A是E的事件（A的发生依赖于背景事件的发生），P(Bi)&gt;0，则
+$$
+P(A)=P(A|B_1)P(B_1)+\dots+P(A|B_n)
+$$</p>
+<p><strong>完全事件系</strong>：B1、...、Bn</p>
+<h2 id="bayes">Bayes 贝叶斯公式<a class="headerlink" href="#bayes" title="Permanent link">&para;</a></h2>
+<p>知道结果求原因发生的概率
+$$
+P(B_i|A)=\frac{P(B_iA)}{P(A)}=\frac{P(B_i)P(A|B_i)}{\sum_{j=1}^nP(B_j)P(A|B_j)}
+$$</p>
+<h1 id="1-6">1-6 独立性<a class="headerlink" href="#1-6" title="Permanent link">&para;</a></h1>
+<div class="arithmatex">\[
+P(AB)=P(A)P(B)\\
+P(A|B)=P(A)\\
+P(B|A)=P(B)
+\]</div>
+<p><strong>定理（反事件独立性）：</strong>A、B互相独立，则下面的事件也相互独立
+$$
+A和\overline B、\overline A和B、\overline A和\overline B
+$$</p>
+<ul>
+<li>P(A),P(B)&gt;0，则AB独立与AB互斥不能同时成立（因为互斥意味着P(A|B)=P(B|A)=0，但这不可能）</li>
+</ul>
+<p><strong>相互独立：</strong></p>
+<p>下面四个等式同时成立，则A、B、C相互独立
+$$
+\begin{cases}
+P(AB)=P(A)P(B)\
+P(BC)=P(B)P(C)\
+P(AC)=P(A)P(C)\
+P(ABC)=P(A)P(B)P(C)
+\end{cases}
+$$</p>
+<ul>
+<li>A1、...、An相互独立，则任意k个事件也相互独立</li>
+<li>A1、...、An相互独立，则将任意多个事件换成它们各自的对立事件，这n个事件仍相互独立</li>
+</ul>
+<h1 id="2-1">2-1 随机变量<a class="headerlink" href="#2-1" title="Permanent link">&para;</a></h1>
+<p><strong>随机变量</strong>：样本空间S、X为定义在样本空间S上的实数函数，则称X为随机变量
+$$
+S={e},X=X(e)
+$$
+（随机变量事先是不确定的）</p>
+<p>离散型随机变量</p>
+<p>连续型随机变量</p>
+<h1 id="2-2">2-2 离散型随机变量分布<a class="headerlink" href="#2-2" title="Permanent link">&para;</a></h1>
+<h2 id="0-1">0-1 分布<a class="headerlink" href="#0-1" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+P\{X=k\}=p^k(1-p)^{1-k},k=0,1
+\]</div>
+<h2 id="bernoulli">Bernoulli 试验、二项分布<a class="headerlink" href="#bernoulli" title="Permanent link">&para;</a></h2>
+<p><strong>Bernoulli 试验</strong>：事件只有A（发生）和A拔（不发生）两种情况</p>
+<p><strong>n重</strong>：做这个试验n次</p>
+<p><strong>二项分布</strong>：
+$$
+X\widetilde~b(n,p)\
+P{X=k}=\binom{n}{k}p<sup 1-k="1-k">k(1-p)</sup>
+$$</p>
+<h2 id="poisson">Poisson 分布<a class="headerlink" href="#poisson" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+X\widetilde~\pi(\lambda)\\
+P\{X=k\}=\frac{\lambda^ke^{-\lambda}}{k!}
+\]</div>
+<p>其中
+$$
+\lambda=np_n\
+\binom{n}{k}p<sup n-k="n-k">k_n(1-p_n)</sup>\approx\frac{\lambda<sup -_lambda="-\lambda">ke</sup>
+$$}}{k!</p>
+<h1 id="2-3">2-3 随机变量的分布函数<a class="headerlink" href="#2-3" title="Permanent link">&para;</a></h1>
+<div class="arithmatex">\[
+F(x)=P(X\le x) ~(-\infty\le x\le+\infty)
+\]</div>
+<p><strong>差分性</strong>：右连续（这里是指间断点处取值取靠右的值）
+$$
+P{x_1\lt X\le x_2}=F(x_2)-F(x_1)
+$$</p>
+<div class="arithmatex">\[
+F(-\infty)=0\\
+F(+\infty)=1\\
+\lim_{x\to x_0}F(x)=F(x_0)
+\]</div>
+<p><strong>单调性</strong>：F(x)不会下降（因为P（x）大于等于0）</p>
+<p><img alt="" src="C:\Users\10411\Desktop\图\TIM截图20200618005419.png" /></p>
+<h1 id="2-4">2-4 连续型随机变量的概率密度<a class="headerlink" href="#2-4" title="Permanent link">&para;</a></h1>
+<div class="arithmatex">\[
+F(x)=\int_{-\infty}^xf(t)dt
+\]</div>
+<p>其中f(x)是概率密度函数，其值描述了概率在x附近的密集程度
+$$
+f(x)\ge0\
+\int_{-\infty}^{+\infty}f(x)dx=1
+$$
+<strong>单调性</strong>：F（x）不会下降（f(x)&gt;=0）</p>
+<h2 id="_10">均匀分布<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+f(x)=\frac1{b-a} ~(a\lt x\le b )\\
+F(x)=\begin{cases}
+0,&amp;x\lt a\\
+\frac{x-a}{b-a},&amp;a\le x\lt b\\
+1,&amp;x\ge b\\
+\end{cases}\\
+X\widetilde~U(a,b)
+\]</div>
+<h2 id="_11">指数分布<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+f(x)=\begin{cases}
+\frac1\theta e^{-\frac x\theta},&amp; x\gt0\\
+0,&amp;\text{else}
+\end{cases}\\
+F(x)=\begin{cases}
+1-e^{-\frac x\theta},&amp; x\gt0\\
+0,&amp;\text{else}
+\end{cases}
+\]</div>
+<p>无记忆性：
+$$
+P(X&gt;s+t|X&gt;s)=P(X&gt;t)
+$$</p>
+<h2 id="_12">正态分布<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+X\widetilde~ N(\mu,\sigma^2)\\
+f(x)=\frac1{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},-\infty&lt;x&lt;+\infty
+\]</div>
+<p><strong>对称性</strong>：曲线关于下面的直线对称
+$$
+x=\mu\
+P{\mu-h&lt;X\le\mu}=P{\mu&lt;X\le\mu+h}
+$$
+<strong>最值</strong>：
+$$
+x=\mu时有最大值\
+f(\mu)=\frac1{\sqrt{2\pi}\sigma}
+$$
+<strong>拐点</strong>：
+$$
+x=\mu\pm\sigma
+$$
+sigma（标准差）越小，图形越尖锐</p>
+<h2 id="_13">标准正态分布<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+X\widetilde~ N(0,1)\\
+\mu=0,\sigma=1\\
+\phi(x)=\frac1{\sqrt{2\pi}}e^{-\frac{x^2}{2}}\\
+\Phi(x)=\frac1{\sqrt{2\pi}}\int_{-\infty}^xe^{-\frac{t^2}{2}}dt
+\]</div>
+<p><strong>关于直线x=0（y轴）对称</strong>：
+$$
+\Phi(-x)=1-\Phi(x)
+$$
+<strong>线性变换公式</strong>：
+$$
+X\widetilde~N(\mu,\sigma^2)\Rightarrow Z=\frac{X-\mu}{\sigma}\widetilde~ N(0,1)
+$$
+通过变换后计算出满足概率的Z，然后通过线性关系得到X</p>
+<h1 id="2-5">2-5 随机变量的函数分布<a class="headerlink" href="#2-5" title="Permanent link">&para;</a></h1>
+<p>已知
+$$
+Y=g(X)
+$$
+根据X的分布F_X(x)求出Y的概率密度函数f_Y(y)
+$$
+F_Y(y)=P(Y\le y)=P(g(X)\le y)\Rightarrow P(X\le h(y))\
+\Rightarrow F_X(h(y))\
+再两端求导得\
+f_Y(y)=f_X(h(y))\cdot h'(y)
+$$
+<strong>定理</strong>：随机变量X的概率密度函数为f_X(x),-∞&lt;x&lt;+∞。g(x)处处可导而且恒为单调函数（g(x)&gt;0 or g'(x)&lt;0 ），则Y=g(X)是连续型随机变量，其概率密度：
+$$
+f_Y(y)=\begin{cases}
+f_x[h(y)]\cdot|h'(y)|,~a&lt;y&lt;b\
+0, \text{else}
+\end{cases}\
+其中\
+a=\min(g(-\infty),g(+\infty))\
+b=\max(g(-\infty),g(+\infty))\
+h=g^{-1}
+$$
+注意：先通过x（X）的值域求解y（Y）的值域</p>
+<h1 id="3-1">3-1 二维随机变量的分布<a class="headerlink" href="#3-1" title="Permanent link">&para;</a></h1>
+<p><strong>二维随机变量的分布函数</strong>：
+$$
+二维随机变量(X,Y)\
+F(x,y)=P{(X\le x)\cap(Y\le y)}=P(X\le x,Y\le y)
+$$
+函数值（概率）
+$$
+F(x,y)=P(x_1&lt;X\le x_2,y_1&lt;Y\le y_2)\
+=F(x_2,y_2)-F(x_1,y_2)-F(x_2,y_1)+F(x_1,y_1)
+$$</p>
+<p>性质：
+$$
+p_{ij}\ge0\
+\sum_i<sup>\infty\sum_j</sup>\infty p_{ij}=1
+$$
+<strong>概率密度</strong>：
+$$
+F(x,y)=\int_{-\infty}<sup>y\int_{-\infty}</sup>xf(u,v)dudv
+$$
+性质：
+$$
+f(x,y)\ge0\
+\int_{-\infty}<sup>\infty\int_{-\infty}</sup>\infty f(u,v)dudv=1\
+F关于x、y的偏导函数是f(x,y)：f(x,y)=\frac{\partial^2F(x,y)}{\partial x\partial y}
+$$</p>
+<h1 id="3-2">3-2 边缘分布<a class="headerlink" href="#3-2" title="Permanent link">&para;</a></h1>
+<h2 id="_14">离散型随机变量的边缘分布<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+P\{X=x_i\}=\sum_{j=1}^\infty p_{ij}\\
+P\{Y=y_i\}=\sum_{i=1}^\infty p_{ij}\\
+F_X(x)=F(x,\infty)=\sum_{x_i\le x}\sum_{j=1}^\infty p_{ij}\\
+F_Y(y)=F(\infty,y)=\sum_{y_i\le y}\sum_{i=1}^\infty p_{ij}
+\]</div>
+<h2 id="_15">连续型随机变量的边缘分布<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<p>固定某一变量，遍历另一变量的所有可能取值
+$$
+f_x(x)=\int_{-\infty}^\infty f(x,y)dy\
+F_X(x)=F(x,+\infty)=\int_{-\infty}<sup _infty="\infty">xdx\int_{-\infty}</sup>f(x,y)dy\
+F_Y(x)=F(+\infty,y)=\int_{-\infty}<sup y="y">{\infty}dx\int_{-\infty}</sup>f(x,y)dy
+$$</p>
+<h1 id="3-3">3-3 条件分布<a class="headerlink" href="#3-3" title="Permanent link">&para;</a></h1>
+<h2 id="_16">条件分布律<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<p>固定其中一个随机变量后取得另一个随机变量的概率（X的条件分布律）
+$$
+P{X=x_i|Y=y_i}=\frac{P{X=x_i,Y=y_i}}{P{Y=y_i}}=\frac{联合分布}{边缘分布}
+$$
+性质：
+$$
+P{X=x_i|Y=y_i}\ge0\
+\sum_{i=1}^\infty P{X=x_i|Y=y_i}=1
+$$</p>
+<h2 id="_17">条件概率密度、条件分布函数<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+f_{X|Y}(x|y)=\frac{f(x,y)}{f_Y(y)}\\
+P\{X\le x|Y=y\}=F_{X|Y}(x|y)=\int_{-\infty}^{x}f_{X|Y}(x|y)dx =
+\int_{-\infty}^x\frac{f(x,y)}{f_Y(y)}dx
+\]</div>
+<h1 id="3-4">3-4 相互独立随机变量<a class="headerlink" href="#3-4" title="Permanent link">&para;</a></h1>
+<p>X的概率不取决于Y的概率
+$$
+f(x,y)=f_X(x)f_Y(y)\
+F(x,y)=F_X(x)F_Y(y)\
+f_{Y|X}(y|x)=f_Y(y),f_{X|Y}(x|y)=f_X(x)
+$$</p>
+<p>对离散型随机变量而言
+$$
+P{X=x_i,Y=y_i}=P{X=x_i}P{Y=y_i}
+$$
+<strong>二维正态随机变量</strong>：rho=0
+$$
+f(x,y)=\frac{1}{2\pi \sigma_1\sigma_2\sqrt{1-\rho<sup>2}}\exp{\frac{-1}{2(1-\rho</sup>2)}[\frac{(x-\mu_1)<sup>2}{\sigma_1</sup>2}-\2\rho \frac{(x-\mu_1)(y-\mu_2)}{\sigma_1 \sigma_2}+\frac{(y-\mu_2)<sup>2}{\sigma</sup>2_2}]}
+$$</p>
+<h1 id="3-5">3-5 两个随机变量的函数分布<a class="headerlink" href="#3-5" title="Permanent link">&para;</a></h1>
+<h2 id="zxy">Z=X+Y<a class="headerlink" href="#zxy" title="Permanent link">&para;</a></h2>
+<p>双随机变量(X,Y) 有密度分布函数f(x,y)，则Z作为X与Y的函数，有
+$$
+F_Z(z)=P(Z\le z)\
+=P(X+Y\le z)\
+=\iint_{x+y\le z}f(x,y)dxdy\
+=\int_{-\infty}<sup z-y="z-y">\infty(\int_{-\infty}</sup>f(x,y)dx)dy（二重积分化为累次积分）\
+令x=u-y（注意上下限变为u的上下限）\
+...=\int_{-\infty}<sup z="z">\infty(\int_{-\infty}</sup>f(u-y,y)du)dy\
+=\int_{-\infty}<sup _infty="\infty">z(\int_{-\infty}</sup>f(u-y,y)dy)du（变换积分顺序）\
+$$
+则
+$$
+f_Z(z)=F'<em -_infty="-\infty">Z(z)=\int</em> f(z-y,y)dy\
+=\int_{-\infty}^{\infty} f(x,z-x)dx
+$$
+当X、Y独立时，有}^{\infty<strong>离散卷积公式</strong>
+$$
+f_Z(z)=\int_{-\infty}^{\infty} f_X(z-y)f_Y(y)dy\
+=\int_{-\infty}^{\infty} f_X(x)f_Y(z-x)dy\
+=f_X<em>f_Y
+$$
+</em><em>正态分布下的Z=X+Y</em>*:</p>
+<p>XY独立，分别具有分布
+$$
+X\widetilde~N(\mu_1,\sigma_1<sup>2),Y\widetilde~N(\mu_2,\sigma_2</sup>2)\
+$$
+则Z=X+Y有分布
+$$
+Z\widetilde~(\mu_1+\mu_2,\sigma_1<sup>2+\sigma_2</sup>2)
+$$
+有限个独立正态分布变量的线性组合仍服从正态分布</p>
+<h2 id="mmaxxy">M=max(X,Y)<a class="headerlink" href="#mmaxxy" title="Permanent link">&para;</a></h2>
+<p>XY独立时（注意这里求出来的是分布而非密度）
+$$
+F_M(z)=P(M\le z)\
+=P(X\le z,Y\le z)\
+=P(X\le z)P(Y\le z)\
+=F_X(z)F_Y(z)
+$$
+更一般的情况：
+$$
+F_M(z)=F_{X_1}(z)F_{X_2}(z)\dots F_{X_n}(z)
+$$</p>
+<h2 id="nminxy">N=min(X,Y)<a class="headerlink" href="#nminxy" title="Permanent link">&para;</a></h2>
+<p>XY独立时（注意这里求出来的是分布而非密度）
+$$
+F_N(z)=P(N\le z)=1-P(N&gt;z)\
+=1-P(X&gt;z,Y&gt;z)=1-P(X&gt;z)P(Y&gt;z)\
+=1-[1-F_X(z)][1-F_Y(z)]
+$$
+更一般的情况：
+$$
+F_N(z)=1-[1-F_{X_1}(z)][1-F_{X_2}(z)]\dots[1-F_{X_n}(z)]
+$$</p>
+<h1 id="4-1-expected-value">4-1 数学期望（Expected value）<a class="headerlink" href="#4-1-expected-value" title="Permanent link">&para;</a></h1>
+<p><strong>离散型数学期望</strong>：设X是离散型随机变量，P(X=x_k)=p_k，则（收敛的级数）E(X)是随机变量X的数学期望
+$$
+E(X)=\sum_{k=1}^\infty x_kp_k\
+$$</p>
+<ul>
+<li>珀松分布X~pi(lambda)的E(X)=lambda</li>
+<li>二项分布X~B(n,p)的E(X)=lambda</li>
+</ul>
+<p><strong>连续型数学期望</strong>：X是连续型随机变量，f(x)为其密度函数，则（收敛的积分）E(X)是随机变量X的数学期望
+$$
+E(X)=\int_{-\infty}^{\infty}xf(x)dx
+$$
+<strong>随机变量函数的数学期望</strong>：Y=g(X)，则（将概率的乘子改为函数映射后的结果即可）
+$$
+E(Y)=E[g(X)]=\sum_{k=1}^\infty g(x_k)p_k\
+=\int_{-\infty}^\infty g(x)f(x)dx
+$$
+<strong>两个（以上）随机变量的函数的数学期望</strong>：Z=g(X,Y)
+$$
+E(Z)=E[g(X,Y)]=\sum_{i=1}\sum_{j=1} g(x_i,y_j)p_{ij}\
+\int_{-\infty}<sup _infty="\infty">{\infty}\int_{-\infty}</sup>g(x,y)f(x,y)dxdy
+$$
+<strong>性质</strong>：</p>
+<ul>
+<li>常数的数学期望为其本身：C:f(x)=c,则E(C)=C</li>
+<li>数学期望的线性组合1：E(kX)=kE(X)</li>
+<li>数学期望的线性组合2：E(X+Y)=E(X)+E(Y)</li>
+<li>独立变量的积性：E(XY)=E(X)E(Y) （充分条件是X、Y独立，但不是必要条件（也就是说推不出X、Y独立））</li>
+</ul>
+<h1 id="4-2-variance">4-2 方差（Variance）<a class="headerlink" href="#4-2-variance" title="Permanent link">&para;</a></h1>
+<div class="arithmatex">\[
+D(X)=E([X-E(X)]^2)\\
+D(X)=\begin{cases}
+\sum_{k=1}^{\infty}[x_k-E(x)]^2p_k\\
+\int_{-\infty}^\infty[x-E(x)]^2f(x)dx
+\end{cases}
+\]</div>
+<p>简化公式（根据定义，利用期望性质拆分化简得到）
+$$
+D(X)=E(X<sup>2)-[E(X)]</sup>2
+$$
+<strong>性质</strong>：</p>
+<ul>
+<li>
+<p>常数的方差为0：D(C)=0</p>
+</li>
+<li>
+<p>常数和随机变量之和的方差不变：D(X+C)=D(X)</p>
+</li>
+<li>
+<p>常数和随机变量之积的方差，等于常数平方乘以该随机变量的方差：
+  $$
+  D(CX)=C^2D(X)\
+  $$</p>
+</li>
+<li>
+<p>两个随机变量的和的方差，等于各自方差和加上2倍协方差
+  $$
+  D(X+Y)=D(X)+D(Y)+2E{(X-E(X))(Y-E(Y))}\
+  =D(X)+D(Y)+2Cov(X,Y)\
+  X和Y独立：D(X+Y)=D(X)+D(Y)
+  $$</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\begin{array}{l|l|l}
+分布X &amp; 期望E &amp; 方差D\\
+\hline
+0-1分布 &amp; p &amp; p(1-p)\\
+二项分布~b(n,p) &amp; np &amp; np(1-p)\\
+均匀分布~U(a,b) &amp; \frac{a+b}{2} &amp; \frac{(b-a)^2}{12}\\
+指数分布~(\theta) &amp; \theta &amp; \theta^2\\
+泊松分布~\pi(\lambda) &amp; \lambda &amp; \lambda \\
+正态分布~N(\mu,\sigma^2) &amp; \mu &amp; \sigma^2
+\end{array}
+\]</div>
+<p><strong>正态分布的线性组合</strong>：</p>
+<p><strong>互相独立</strong>的服从<strong>正态分布</strong>的变量
+$$
+X_i\widetilde~N(\mu_i,\sigma_i^2)
+$$
+的线性组合也服从正态分布
+$$
+C_1X_1+\dots+C_nX_n\widetilde~N(\sum_{i=1}^n C_i\mu_i,\sum_{i=1}^n C_i<sup>2\sigma_i</sup>2)
+$$
+<strong>切比雪夫不等式</strong>：</p>
+<p>估计落在区域<strong>外</strong>的概率<strong>上界</strong></p>
+<p>E(X)=mu, D(X)=sigma
+$$
+P{|X-\mu|\ge\epsilon}\le\frac{\sigma<sup>2}{\epsilon</sup>2}\
+P{|X-\mu|\le\epsilon}\ge1-\frac{\sigma<sup>2}{\epsilon</sup>2}\
+$$</p>
+<ul>
+<li>sigma越小，落在区间内的概率越大，集中在期望值（平均数）附近的可能性越大</li>
+<li>3sigma原则：对于任意的分布，X取值超过3sigma的概率小于0.111 (1/9)</li>
+</ul>
+<h1 id="4-3-covariance">4-3 协方差（Covariance）<a class="headerlink" href="#4-3-covariance" title="Permanent link">&para;</a></h1>
+<p>两个变量的总体的误差；两个变量的变化趋势一致为正，相反为负
+$$
+Cov(X,Y)=E{[X-E(X)][Y-E(Y)]}
+$$
+<strong>简易公式</strong>：
+$$
+Cov(X,Y)=E(XY)-E(X)E(Y)
+$$
+<strong>性质</strong>：</p>
+<ul>
+<li>
+<p>随机变量相互独立，则协方差为0：X，Y独立时，Cov(X,Y)=0</p>
+</li>
+<li>
+<p>交换律：Cov(X,Y)=Cov(Y,X)</p>
+</li>
+<li>
+<p>线性性质（数乘）：Cove(aX,bY)=ab Cov(X,Y)</p>
+</li>
+<li>
+<p>线性性质（叠加）Cov(X1+X2,Y)=Cov(X1,Y) + Cove(X2,Y)</p>
+</li>
+<li>
+<p>自己和自己的协方差等于自己的方差：
+  $$
+  Cov(X,X)=E(X<sup>2)-E(X)</sup>2=D(X)
+  $$</p>
+</li>
+</ul>
+<p>与协方差的关系：
+$$
+D(X+Y)=D(X)+D(Y)+2Cov(X,Y)
+$$
+<strong>（线性）相关系数</strong>：衡量变量X、Y的线性相关程度；绝对值越接近1，线性相关程度越高
+$$
+\rho_{XY}=\frac{Cov(X,Y)}{\sqrt{D(X)D(Y)}}
+$$
+<strong>性质</strong>：</p>
+<ul>
+<li>
+<div class="arithmatex">\[
+  |\rho|\le1
+  \]</div>
+</li>
+<li>
+<p>（仅充分条件）X、Y独立，则它们的相关系数一定为0
+  $$
+  X、Y独立\Rightarrow\rho=0
+  $$
+  （反之不成立的一个例子：X~U(-0.5,0.5),Y=cosX）</p>
+</li>
+<li>
+<p>取得性质1等号的充分必要条件是Y与X以100%概率线性相关
+  $$
+  |\rho|=1\Leftrightarrow \exist a,b(b\ne0)，P(Y=a+bX)=1
+  $$</p>
+</li>
+</ul>
+<h1 id="4-4-moment">4-4 矩（moment）、协方差矩阵<a class="headerlink" href="#4-4-moment" title="Permanent link">&para;</a></h1>
+<p><strong>（k阶）原点矩</strong>：(k&gt;=1)
+$$
+E(X^k)
+$$
+<strong>（k阶）中心矩</strong>：(k&gt;=1)
+$$
+E{[X-E(X)]^k}
+$$
+<strong>（k+l阶）混合矩</strong>：(k,l&gt;=1)
+$$
+E(X<sup>kY</sup>l)
+$$
+<strong>（k+l阶）混合中心矩</strong>：(k,l&gt;=1)
+$$
+E([X-E(X)]<sup>k[Y-E(Y)]</sup>l)
+$$
+<strong>协方差矩阵</strong>：
+$$
+\begin{bmatrix}
+c_{11} &amp; c_{12}\
+c_{21} &amp; c_{22}
+\end{bmatrix}\
+\text{where}\
+c_{11}=E{[X_1-E(X_1)]^2}\
+c_{12}=E{[X_1-E(X_1)][X_2-E(X_2)]}\
+c_{21}=E{[X_2-E(X_2)][X_1-E(X_1)]}\
+c_{22}=E{[X_2-E(X_2)]^2}\
+$$
+一般形式
+$$
+\begin{bmatrix}
+c_{11} &amp; \cdots &amp; c_{1n}\
+\vdots &amp; \ddots &amp; \vdots\
+c_{n1} &amp; \cdots &amp; c_{nn}\
+\end{bmatrix}\
+\text{where}\
+c_{ij}=E{[X_i-E(X_i)][X_j-E(X_j)]}\
+$$
+<strong>n维正态分布的概率密度</strong>：
+$$
+X^T=[X_1,\dots,X_n]\
+f(x1,\dots,x_n)=\frac{\exp{ -\frac12(X-\mu)<sup -1="-1">TC</sup>
+$$
+}(X-\mu) }}{(2\pi)^\frac n2|C|^\frac 12<strong>性质</strong>：</p>
+<ul>
+<li>X=(X1,...Xn) 服从n元正态分布，则它们的线性组合（不为零的）也服从正态分布</li>
+</ul>
+<div class="arithmatex">\[
+a_1X_1+a_2X_2+\dots a_nX_n\widetilde~N
+\]</div>
+<ul>
+<li>
+<p>线性变换不变性：X1,...,Xn服从n元正态分布，则Xi的所有线性函数Yi也服从n元正态分布</p>
+</li>
+<li>
+<p>X1,...,Xn服从n元正态分布，则X1,...,Xn相互独立等价于X1,...,Xn两两不相关</p>
+</li>
+</ul>
+<h1 id="5-1">5-1 大数定律<a class="headerlink" href="#5-1" title="Permanent link">&para;</a></h1>
+<p><strong>切比雪夫大数定律</strong>：（切比雪夫定律的特殊情况）</p>
+<p>设随机变量X1，X2，...，Xn<strong>相互独立</strong>，且具有<strong>相同</strong>的<strong>数学期望</strong>mu和<strong>方差</strong>sigma^2，则前n个随机变量的算数平均数（频率）（X拔）对于任意的epsilon&gt;0有
+$$
+E(X_k)=\mu,D(X_k)=\sigma^2,\overline X=\frac1n\sum_{i=1}^nX_i\
+\lim_{n\to\infty}P(|\overline X-\mu|\lt\epsilon)\
+=\lim_{n\to\infty} P(|\frac1n\sum_{i=1}^nX_i-\mu|\lt\epsilon)=1~(\forall\epsilon\gt0)
+$$
+前n个随机变量的平均値与期望值的偏差小于某一特定（正）数值的概率趋近于1</p>
+<p><strong>依概率收敛</strong>：Y1、...、Yn是随机变量序列，a为常数，对于任意常数epsilon有下式，则称这个序列依概率收敛于a
+$$
+\overline Y_n=\frac1n\sum_{i=1}^nY_i\
+\lim_{n\to\infty}P(|\overline Y_n-a|\lt\epsilon)=1~(\forall\epsilon\gt0)\\Downarrow\
+Y_n\to^{P}a
+$$
+前n个随机变量的平均値与某常数的偏差小于某一特定（正）数值的概率趋近于1</p>
+<p>性质：</p>
+<p>设Xn收敛于a，Yn收敛于b，g(x,y)在点(a,b)连续，则g(Xn,Yn)收敛于g(a,b)</p>
+<p><strong>辛钦大数定理（弱大数定理）</strong>：</p>
+<p>设随机变量X1，X2，...，Xn<strong>相互独立</strong>，且具有<strong>相同</strong>的<strong>数学期望</strong>mu，则前n个随机变量的算数平均数（频率）（X拔）依概率收敛于mu
+$$
+\overline X\to^{P} \mu \
+\lim_{n\to\infty}P(|\frac1n\sum_{i=1}^nX_i-\mu|\lt\epsilon)=1~(\forall\epsilon\gt0)
+$$
+- 证明：切比雪夫不等式</p>
+<p><strong>伯努利大数定理</strong>：</p>
+<p>nA是n次独立重复试验中事件A的发生次数，p是事件A在每次试验中发生的概率（nA~b(n,p)），则对于任意整数epsilon&gt;0，有
+$$
+\lim_{n\to\infty}P(|\frac{n_A}{n}-p|\lt\epsilon)=1\
+\lim_{n\to\infty}P(|\frac{n_A}{n}-p|\ge\epsilon)=0
+\(\forall\epsilon\gt0)
+$$
+“频率趋近于事件概率”的概率趋近于1</p>
+<ul>
+<li>
+<p>事件发生的频率可以代替事件概率</p>
+</li>
+<li>
+<div class="arithmatex">\[
+  X\sim b(n,p)\Rightarrow \overline X\sim N(np,p(1-p))
+  \]</div>
+</li>
+</ul>
+<h1 id="5-2">5-2 中心极限定理<a class="headerlink" href="#5-2" title="Permanent link">&para;</a></h1>
+<p><strong>独立同分布中心极限定理</strong>：X1...Xn相互独立，服从<strong>同一分布</strong>，而且具有（相同的）数学期望E(Xi)=mu与方差D(Xi)=sigma^2，则随机变量之和的标准化变量
+$$
+Y_n=\frac{\sum_{k=1}^nX_k-n\mu}{\sqrt n\sigma}
+$$</p>
+<p>的分布函数Fn(x)对于任意x满足
+$$
+\lim_{n\to\infty}F_n(x)=\lim_{n\to\infty}P{\frac{\sum_{k=1}^nX_k-n\mu}{\sqrt n\sigma}\le x}=\Phi(x)
+$$
+也就是说，n充分大时：</p>
+<ul>
+<li>
+<div class="arithmatex">\[
+  \sum_{k=1}^nX_k\sim N(n\mu,n\sigma^2)
+  \]</div>
+</li>
+<li>
+<div class="arithmatex">\[
+  Y_n=\frac{\sum_{k=1}^nX_k-n\mu}{\sqrt n\sigma}\sim N(0,1)
+  \]</div>
+</li>
+<li>
+<div class="arithmatex">\[
+  \overline X=\frac1n\sum_{k=1}^nX_k\sim N(\mu,\frac{\sigma^2}n)
+  \]</div>
+</li>
+<li>
+<div class="arithmatex">\[
+  \frac{\overline X-\mu}{\frac\sigma{\sqrt n}}\sim N(0,1)
+  \]</div>
+</li>
+</ul>
+<p><strong>李雅普诺夫(Liapounov)定理</strong>（<strong>非独立同分布中心极限定理</strong>）：</p>
+<p>X1...Xn相互独立，而且具有数学期望与方差
+$$
+E(X_i)=\mu_i,D(X_i)=\sigma_i^2
+$$
+令所有变量的方差和为Bn^2
+$$
+B_n<sup>2=\sum_{i=1}</sup>n\sigma_i^2
+$$
+如果存在正数
+$$
+\frac1{B_n<sup>{2+\delta}}\sum_{i=1}</sup>nE(|X_i-\mu_i|^{2+\delta})\to0
+$$
+则随机变量之和的标准化变量
+$$
+Z_n=\frac{\sum_{i=1}<sup>nX_i-E(\sum_{i=1}</sup>nX_i)}{\sqrt{D(\sum_{i=1}<sup>nX_i)}}=\frac{\sum_{i=1}</sup>nX_i-\sum_{i=1}^n\mu_i}{B_n}
+$$
+的分布函数Fn(x)对任意x满足
+$$
+\lim_{n\to\infty}F_n(x)=\lim_{n\to\infty}P{Z_n\le x}=\lim_{n\to\infty}P{\frac{\sum_{i=1}<sup>nX_i-\sum_{i=1}</sup>n\mu_i}{B_n}\le x}=\Phi(x)
+$$
+这就是说，n充分大时：</p>
+<ul>
+<li>
+<div class="arithmatex">\[
+  \sum_{i=1}^nX_i\sim N(\sum_{i=1}^n\mu_i,\sum_{i=1}^n\sigma_i^2)=N(\sum_{i=1}^n\mu_i,B_n^2)
+  \]</div>
+</li>
+<li>
+<div class="arithmatex">\[
+  Z_n=\frac{\sum_{i=1}^nX_i-E(\sum_{i=1}^nX_i)}{\sqrt{D(\sum_{i=1}^nX_i)}}=\frac{\sum_{i=1}^nX_i-\sum_{i=1}^n\mu_i}{B_n}\sim N(0,1)
+  \]</div>
+</li>
+</ul>
+<p><strong>棣莫佛拉普拉斯定理（二项分布中心极限定理）</strong>：</p>
+<p>随机变量eta1...etan服从同一二项分布B(n,p)，则对任意x有
+$$
+\lim_{n\to\infty}P{\frac{\eta_n-np}{\sqrt{np(1-p)}}\le x}=\Phi(x)
+$$
+这就是说，n充分大时，
+$$
+\eta_n\sim N(np,np(1-p))
+$$</p>
+<h1 id="6-1">6-1 随机样本<a class="headerlink" href="#6-1" title="Permanent link">&para;</a></h1>
+<p><strong>总体</strong>：研究对象的全体</p>
+<p><strong>个体</strong>：总体中的每个成员</p>
+<p><strong>容量</strong>：总体中包含的个体个数</p>
+<p><strong>抽样、样本</strong>：抽取（抽样）其中部分得到的结果（样本），由部分推断整体</p>
+<p><strong>简单随机抽样</strong>：</p>
+<ul>
+<li>代表性：X1....Xn中每一个样本与考察的总体有相同分布</li>
+<li>独立性：X1....Xn是相互独立的随机变量（<strong>简单随机样本</strong>）</li>
+</ul>
+<h1 id="6-2">6-2 样本和抽样分布<a class="headerlink" href="#6-2" title="Permanent link">&para;</a></h1>
+<p><strong>统计量</strong>：（对样本进行加工）<strong>不含任何未知参数</strong>的样本的函数称为统计量
+$$
+g(X_1,\dots,X_n)
+$$</p>
+<p>x1...xn是X1...Xn的观察值</p>
+<p>g(x1,...xn)是g(X1,...Xn)的观察值</p>
+<p><strong>样本均值</strong>、<strong>样本方差</strong>、<strong>样本标准差</strong>：
+$$
+\overline X=\frac1n\sum_{i=1}^nX_i\
+S<sup>2=\frac1{n-1}\sum_{i=1}</sup>n(X_i-\overline X)<sup>2=\frac1{n-1}(\sum_{i=1}</sup>nX_i^2-n\overline X^2)\
+S=\sqrt{\frac1{n-1}(\sum_{i=1}<sup>nX_i</sup>2-n\overline X^2)}
+$$
+<strong>样本的k阶原点矩、k阶中心矩：</strong>
+$$
+A_k=\frac1n\sum_{i=1}<sup>nX_i</sup>k\
+B_k=\frac1n\sum_{i=1}^n(X_i-\overline X)^k\
+$$
+总体X的k阶矩存在E(X<sup>k)=mu</sup>k，则当n→∞时
+$$
+A_k=\frac1n\sum_{i=1}<sup>nX_i</sup>k\to<sup>P\mu</sup>k~(k=1,2,\dots)\
+g(A_n,\dots,A_k)\to<sup>Pg(\mu</sup>1,\dots,\mu^k)
+$$
+<strong>经验分布函数</strong>：</p>
+<p>X1，...，Xn是总体F的一个样本，s(x)表示这些样本中不大于x的随机变量个数
+$$
+F_n(x)=\frac1ns(x),-\infty&lt;x&lt;\infty\
+=\begin{cases}
+0,x&lt;x(1)\
+\frac kn,x(k)\le x&lt;x(k+1)\
+1,x\ge x(n)
+\end{cases},(序列x(i)从小至大排序)
+$$</p>
+<h2 id="chi-square-distribution">卡方分布（chi-square distribution）<a class="headerlink" href="#chi-square-distribution" title="Permanent link">&para;</a></h2>
+<p>X1,...Xn相互独立，都服从<strong>标准正态分布N(0,1)</strong>，则称随机变量
+$$
+\chi<sup>2=X_1</sup>2+\dots+X_n^2
+$$
+服从<strong>自由度为n</strong>的卡方分布
+$$
+\chi^2\sim \chi^2(n)\
+f(x;n)=\begin{cases}
+\frac{1}{2<sup _frac="\frac" n2-1="n2-1">{n/2}\Gamma(n/2)}x</sup>,x\ge0\
+0,x&lt;0
+\end{cases}\
+\Gamma(x)=\int_0^\infty e}e^{-\frac x2<sup x-1="x-1">{-t}t</sup>dt,x&gt;0~(=(x-1)!)\
+\Gamma(s,x)=\int_x^\infty e<sup s-1="s-1">{-t}t</sup>dt
+$$
+特别地：
+$$
+\chi^2(1) \Leftrightarrow \Gamma(\frac12,2)（伽马分布）\
+\Gamma(\alpha,\beta),f(x)=\frac{x<sup>{\alpha-1}\lambda</sup>\alpha e^{-\lambda x}}{\Gamma(\alpha)}
+$$
+<strong>性质</strong>：</p>
+<ol>
+<li>归一化公式</li>
+</ol>
+<div class="arithmatex">\[
+X_1,\dots,X_n\sim N(\mu,\sigma^2)\Rightarrow\\ \chi^2=\frac1{\sigma^2}\sum_{i=1}^n(X_i-\mu)^2\sim \chi^2(n)
+\]</div>
+<ol>
+<li>可加性</li>
+</ol>
+<div class="arithmatex">\[
+X_1\sim \chi^2(n_1),X_2\sim \chi^2(n_2)\Rightarrow\\
+X_1+X_2\sim \chi^2(n_1+n_2)
+\]</div>
+<ol>
+<li>中心极限</li>
+</ol>
+<div class="arithmatex">\[
+\chi^2\sim \chi^2(n),n充分大时有\frac{X-n}{\sqrt{2n}}\sim N(0,1)
+\]</div>
+<ol>
+<li>期望和方差</li>
+</ol>
+<div class="arithmatex">\[
+E(X)=n,D(X)=2n
+\]</div>
+<ol>
+<li>卡方分布的分位点：给定alpha∈(0，1)，满足条件的点chi^2_alpha(n)，</li>
+</ol>
+<div class="arithmatex">\[
+P(\chi^2&gt;\chi^2_\alpha(n))=\int_{\chi^2_\alpha(n)}^{\infty}f(y)dy=\alpha\\
+\chi^2_{0.1}(25)=34.382\\
+(x&gt;34.382时，P\{x&gt;34.382\}=0.1)
+\]</div>
+<h2 id="t">t 分布（学生氏分布）<a class="headerlink" href="#t" title="Permanent link">&para;</a></h2>
+<p>设X<sub>N(0,1)，Y</sub>chi^2(n)，X、Y相互独立，则t
+$$
+t=\frac{X}{\sqrt{\frac Yn}}
+$$
+服从<strong>自由度为n</strong>的t分布，记为t~t(n)，
+$$
+f(t)=\frac{\Gamma(\frac{n+1}2)}{\Gamma(\frac n2)\sqrt{n\pi}}(1+\frac{t<sup -_frac_n_1="-\frac{n+1">2}{n})</sup>~(-\infty&lt;t&lt;\infty)
+$$
+}{2}<strong>性质</strong>：</p>
+<ol>
+<li>数学期望和方差：</li>
+</ol>
+<div class="arithmatex">\[
+E(t)=0,D(t)=\frac n{n-2}
+\]</div>
+<ol>
+<li>中心极限：t分布密度函数关于<strong>t=0对称</strong>，n充分大时，</li>
+</ol>
+<div class="arithmatex">\[
+\lim_{n\to\infty}f(t)=\frac1{\sqrt{2\pi}}e^{-\frac{t^2}2}\\
+t\sim N(0,1)
+\]</div>
+<ol>
+<li>分位点：给定alpha∈(0，1)，满足条件的点t_alpha(n)，</li>
+</ol>
+<div class="arithmatex">\[
+P(t&gt;t_\alpha(n))=\int_{t_\alpha(n)}^\infty f(t)dt=\alpha\\
+t_{0.025}(15)=2.1315\\
+(x&gt;2.1315，P(x&gt;2.1315)=0.025)
+\]</div>
+<h2 id="f">F分布<a class="headerlink" href="#f" title="Permanent link">&para;</a></h2>
+<p>U~chi^2(n1), V~chi^2(n2)，U，V独立，则F
+$$
+F=\frac{U/n_1}{V/n_2}
+$$
+服从自由度为n1（第一自由度）和n2（第二自由度）的F分布
+$$
+F\sim F(n_1,n_2)\
+\frac1F=\frac{V/n_2}{U/n_1}\sim F(n_2,n_1)\
+$$
+概率密度
+$$
+\phi(y)=\begin{cases}
+\frac{\Gamma(\frac{n_1+n_2}{2})}{\Gamma(\frac {n_1}{2})\Gamma(\frac {n_2}{2})}(\frac{n_1}{n_2})<sup _frac_n_1="\frac{n_1">{\frac{n_1}2}(y)</sup>,y&gt;0\
+0,y\le 0
+\end{cases}
+$$
+}{2}-1}(1+\frac{n_1}{n_2}y)^{-\frac{n_1+n_2}{2}<strong>性质</strong>：</p>
+<ol>
+<li>数学期望（没有特别的对称性）</li>
+</ol>
+<div class="arithmatex">\[
+E(F)=\frac{n_2}{n_2-2},(n_2&gt;2)
+\]</div>
+<ol>
+<li>分位点：给定alpha∈(0，1)，满足条件的点F_alpha(n1,n2)，</li>
+</ol>
+<div class="arithmatex">\[
+P(F&gt;F_\alpha(n_1,n_2))=\int_{F_\alpha(n_1,n_2)}^\infty\phi(y)dy=\alpha\\
+F_{1-\alpha}(n_1,n_2)=\frac1{F_\alpha(n_2,n_1)}\\
+F_{0.95}(12,9)=\frac1{F_{0.05}(9,12)}=\frac{1}{2.80}=0.357
+\]</div>
+<h2 id="_18">抽样分布定理<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<p><strong>样本均值和样本方差</strong>：总体（不论服从何种分布）的均值和方差已经知道、知道样本的数量，则
+$$
+E(\overline X)=\mu\
+D(\overline X)=\frac{\sigma^2}{n}\
+E(S<sup>2)=\sigma</sup>2\
+(S<sup>2=\frac1{n-1}(\sum_{i=1}</sup>nX_i^2-n\overline X^2)
+$$
+<strong>样本均值分布（定理一）</strong>：（知道样本的个数和均值、总体的均值和方差）</p>
+<p>X1...Xn来自正态总体N（mu，sigma^2），则样本均值服从正态分布
+$$
+\overline X\sim N(\mu,\frac{\sigma^2}{n})\
+\frac{\overline X-\mu}{\frac\sigma{\sqrt{n}}}\sim N(0,1)
+$$
+<strong>样本方差分布（定理二）</strong>：（知道样本的个数和方差、总体的方差）</p>
+<p>X1...Xn是来自正态总体N(mu,sigma^2)的样本，则样本均值和样本方差有下列性质
+$$
+\frac{(n-1)S<sup>2}{\sigma</sup>2}\sim \chi^2(n-1)\
+\overline X和S^2独立
+$$
+<strong>样本均值分布2（定理三）</strong>：（知道样本的个数、均值和方差、总体的均值）</p>
+<p>X1...Xn是来自正态总体N(mu,sigma^2)的样本，则
+$$
+\frac{\overline X-\mu}{S/\sqrt n}\sim t(n-1)
+$$</p>
+<p><strong>样本均值差</strong>、<strong>样本方差比的分布（定理四）</strong>：（知道两种样本的个数和方差、两种分布的方差）</p>
+<p>设X~N(mu_1,sigma<sup>2_1),Y~N(mu_2,sigma</sup>2_2),，X、Y相互独立，X1...Xn是来自X的样本，Y1...Yn是来自Y的样本，，则样本均值和样本方差满足：
+$$
+\frac{S_1<sup>2/S_2</sup>2}{\sigma<sup>2_1/\sigma</sup>2_2}\sim F(n_1-1,n_2-1)\
+\frac{(\overline X-\overline Y)-(\mu_1-\mu_2)}{S_w\sqrt{\frac1{n_1}+\frac1{n_2}}}\sim t(n_1+n_2-2),(\sigma<sup>2_1=\sigma</sup>2_2=\sigma^2)\
+where~S_w<sup>2=\frac{(n_1-1)S_1</sup>2+(n_2-1)S_2^2}{n_1+n_2-2}
+$$</p>
+<p>（注意第二个只能在两个分布的方差相同时使用）</p>
+<h1 id="7-1">7-1 点估计法<a class="headerlink" href="#7-1" title="Permanent link">&para;</a></h1>
+<h2 id="_19">矩估计法<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<p>样本k阶矩可以估计总体k阶矩
+$$
+样本矩：A_k=\frac 1n\sum_{i=1}<sup>nX_i</sup>k\
+总体矩：E(X^k)=\mu_k
+$$
+设分布中有k个参数未知，那么前k阶矩为mu1...mun，则可以根据若干个（一般是k个）<strong>矩关于这k个参数的方程</strong>求解出这k个参数
+$$
+\mu_i=\mu_i(\theta_1,...,\theta_k)\
+\Downarrow\
+\theta_j=\theta_j(\mu_1,...,\mu_k)
+$$
+其中的mu用样本矩来代替
+$$
+\mu_i:=A_i\
+\hat\theta=\theta_j(A_1,...,A_k)
+$$</p>
+<h2 id="_20">最大似然估计法<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<p>f(x1,...;theta)是样本的联合概率密度，定义似然函数（其中x1...是抽样观察值）：
+$$
+L(\theta)=f(x_1,...,x_n;\theta)
+$$
+令似然函数最大的参数theta即为最大似然估计量
+$$
+\frac{d\ln L(\theta)}{d\theta}=0
+$$</p>
+<ul>
+<li>适用于样本总体分布离散且已经知道分布律的情况</li>
+</ul>
+<p>对于正态分布，最大似然参数估计：
+$$
+\hat\mu=\overline x,\hat\sigma^2=\frac 1n\sum_{i=1}^n(X_i-\overline X)^2
+$$</p>
+<h1 id="7-2">7-2 估计量的选取标准<a class="headerlink" href="#7-2" title="Permanent link">&para;</a></h1>
+<p><strong>无偏性</strong>：</p>
+<p>设
+$$
+\hat\theta(X_1,...,X_n)
+$$
+是参数theta的估计量，如果这个估计量的期望是真实的theta（也即估计量随着参数变化而在真实值附近摆动）
+$$
+E(\hat\theta)=\theta
+$$
+则称其是theta的<strong>无偏估计</strong></p>
+<ul>
+<li>没有系统偏差</li>
+</ul>
+<p><strong>有效性</strong>：</p>
+<p>设
+$$
+\hat\theta_1(X_1,...,X_n),\hat\theta_2(X_1,...,X_n)
+$$
+均是theta的无偏估计，如果对于任意的theta∈O，
+$$
+D(\hat\theta_1)\le D(\hat\theta_2)
+$$
+且至少有一个theta能使得上式中的不等号成立，则<sup>theta1比</sup>theta2有效</p>
+<p><strong>相合性</strong>：</p>
+<p>设
+$$
+\hat\theta(X_1,...,X_n)
+$$
+若对于任意theta，n→∞时，^theta依概率收敛于theta，则称其为theta的<strong>相合估计量</strong></p>
+<h1 id="7-3">7-3 区间估计<a class="headerlink" href="#7-3" title="Permanent link">&para;</a></h1>
+<p>设theta是一个待估计参数，给定alpha&gt;0，如果由样本X1...Xn确定的两个统计量为
+$$
+\underline\theta=\underline\theta(X_1,...,X_n)\
+\overline\theta=\overline\theta(X_1,...,X_n)\(\underline\theta&lt;\overline\theta)
+$$
+满足
+$$
+P(\underline\theta&lt;\theta&lt;\overline\theta)=1-\alpha
+$$
+则这个（置信下限，置信上限）区间为theta的置信度/置信水平为1-alpha的置信区间</p>
+<ul>
+<li>精度尽可能高（区间长度尽可能短）</li>
+<li>置信度尽可能大（一般优先保证）</li>
+</ul>
+<p><strong>alpha分位点</strong>：</p>
+<p>满足
+$$
+P(X&gt;x_\alpha)=\alpha\
+P(X\le x_\alpha)=1-\alpha\
+$$
+的点x_alpha为X的概率分布上的alpha分位点
+$$
+P(a&lt;X&lt;b)=1-\alpha\
+P(X&lt;b)-P(X&lt;a)=1-\alpha\
+P(X&lt;b)=1-\frac\alpha3,P(X&lt;b)=\frac{2\alpha}3,\
+a=x_{1-\frac{2\alpha}3},b=x_{\frac\alpha3}
+$$</p>
+<blockquote>
+<p><strong>步骤：</strong>求某个参数theta的置信水平为1-alpha的置信区间（例如寻找N(mu,sigma^2)中mu的区间估计）</p>
+<ul>
+<li>
+<p>寻找theta的一个良好点估计T（无偏估计，服从相合性等等）（例如寻找平均数_X）</p>
+</li>
+<li>
+<p>寻找关于参数theta和点估计T的已知分布函数U
+  $$
+  \frac{\overline X-\mu}{\frac\sigma{\sqrt{n}}}\sim N(0,1)
+  $$</p>
+</li>
+<li>
+<p>根据置信水评1-alpha和U的分布求出分位点
+  $$
+  P(a&lt;U(T,\theta)&lt;b)=1-\alpha\
+  P(|{\frac{\overline X-\mu}{\frac\sigma{\sqrt{n}}}}|&lt;x_{\alpha/2})=1-\alpha
+  $$</p>
+</li>
+<li>
+<p>P(...)中解出置信区间
+  $$
+  P(\underline\theta&lt;\theta&lt;\overline\theta)=1-\alpha\
+  P(\overline X-\frac{\sigma}{\sqrt n}u_{\alpha/2}\le \mu \le \overline X+\frac{\sigma}{\sqrt n}u_{\alpha/2})=1-\alpha
+  $$
+</p>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>U的概率密度为单峰对称时，a=-b时置信区间长度最短</li>
+</ul>
+<p><strong>单侧置信区间</strong>：</p>
+<p>设theta是一个待估计参数，给定alpha&gt;0，如果由样本X1...Xn确定的统计量为_theta，且对于任意能取到的theta满足
+$$
+P(\theta\ge\underline\theta)=1-\alpha
+$$
+则[_theta,+∞)是theta的置信水平为1-alpha的单侧置信区间</p>
+<p>同理有置信上限：
+$$
+P(\theta\le\overline\theta)=1-\alpha
+$$</p>
+<h1 id="7-4">7-4 正态总体均值和方差的区间估计<a class="headerlink" href="#7-4" title="Permanent link">&para;</a></h1>
+<h2 id="_21">单个正态总体<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+<p>X~N(mu,sigma<sup>2)，设X1...Xn是总体样本，_X，S</sup>2分别是样本均值和样本方差</p>
+<p><strong>总体均值mu的置信区间</strong>：</p>
+<p>1.sigma^2已知时：
+$$
+\frac{\overline X-\mu}{\sigma/\sqrt n}\sim N(0,1)
+$$
+可由此得置信区间
+$$
+\mu:(\overline X-\frac{\sigma}{\sqrt n}u_{\alpha/2},\overline X+\frac{\sigma}{\sqrt n}u_{\alpha/2})
+$$</p>
+<p>2.sigma^2未知时：
+$$
+\frac{\overline X-\mu}{S/\sqrt n}\sim t(n-1)
+$$
+可由此得置信区间
+$$
+\mu:(\overline X-\frac{S}{\sqrt n}t_{\alpha/2}(n-1),\overline X+\frac{S}{\sqrt n}t_{\alpha/2}(n-1))
+$$
+<strong>总体方差sigma的置信区间：</strong>
+$$
+\frac{(n-1)S<sup>2}{\sigma</sup>2}\sim\chi^2(n-1)
+$$
+可由此得置信区间
+$$
+P{\chi<sup>2_{1-{\alpha/2}}(n-1)&lt;\frac{(n-1)S</sup>2}{\sigma<sup>2}&lt;\chi</sup>2_{{\alpha/2}}(n-1)}=1-\alpha
+\
+\sigma<sup>2:(\frac{(n-1)S</sup>2}{\chi<sup>2_{\alpha/2}(n-1)},\frac{(n-1)S</sup>2}{\chi^2_{1-\alpha/2}(n-1)})\
+\sigma:(\frac{\sqrt{(n-1)}S}{\sqrt{\chi<sup>2_{\alpha/2}(n-1)}},\frac{\sqrt{(n-1)}S}{\sqrt{\chi</sup>2_{1-\alpha/2}(n-1)}})\
+$$</p>
+<h2 id="_22">两个正态总体<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h2>
+<p>X1...Xn是来自第一个总体N(mu_1,sigma_1^2)的样本；</p>
+<p>Y1...Yn是来自第二个总体N(mu_1,sigma_1^2)的样本；</p>
+<p>设他们相互独立，给定置信水平1-alpha，_X _Y分别是第一个、第二个样本均值，S1<sup>2,S2</sup>2分别是第一个、第二个样本方差</p>
+<p><strong>两个总体均值差的置信区间(mu1-mu2)：</strong></p>
+<p>1.已知两个总体的方差：
+$$
+\overline X-\overline Y\sim N(\mu_1-\mu_2,\frac{\sigma_1<sup>2}{n_1}+\frac{\sigma_2</sup>2}{n_1})\
+\frac{\overline X-\overline Y-(\mu_1-\mu_2)}{\sqrt{\frac{\sigma_1<sup>2}{n_1}+\frac{\sigma_2</sup>2}{n_2}}}\sim N(0,1)
+$$
+得到置信区间
+$$
+\mu_1-\mu_2:(\overline X-\overline Y-\sqrt{\frac{\sigma_1<sup>2}{n_1}+\frac{\sigma_2</sup>2}{n_2}}u_{\alpha/2},\overline X-\overline Y+\sqrt{\frac{\sigma_1<sup>2}{n_1}+\frac{\sigma_2</sup>2}{n_2}}u_{\alpha/2})
+$$
+2.已知两个总体的方差相等（均为sigma^2）</p>
+<p>由抽样分布定理4：
+$$
+\frac{\overline X-\overline Y-(\mu_1-\mu_2)}{S_\omega\sqrt{\frac{1}{n_2}+\frac{1}{n_2}}}\sim t(n_1+n_2-2)\
+where~S_\omega<sup>2=\frac{(n_1-1)S_1</sup>2+(n_2-1)S_2^2}{n_1+n_2-2}（样本均值加权平均）
+$$
+可得置信区间
+$$
+\mu_1-\mu_2:(\overline X-\overline Y\pm S_\omega\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}t_{\alpha/2}(n_1+n_2-2))
+$$
+<strong>两个总体方差比值的置信区间(sigma1<sup>2/sigma2</sup>2)：</strong></p>
+<p>由抽样分布定理4：
+$$
+\frac{S_1<sup>2/S_2</sup>2}{\sigma<sup>2_1/\sigma</sup>2_2}\sim F(n_1-1,n_2-2)\
+P(F_{1-\alpha/2}(n_1-1,n_2-1)&lt;\frac{S_1<sup>2/S_2</sup>2}{\sigma<sup>2_1/\sigma</sup>2_2}&lt;F_{\alpha/2}(n_1-1,n_2-1))=1-\alpha
+$$
+得置信区间：
+$$
+\frac{\sigma_1<sup>2}{\sigma_2</sup>2}:(\frac{S_1<sup>2}{S_2</sup>2}\frac1{F_{\alpha/2}(n_1-1,n_2-1)},\frac{S_1<sup>2}{S_2</sup>2}\frac1{F_{1-\alpha/2}(n_1-1,n_2-1)})
+$$</p>
+<h1 id="8-1">8-1 假设检验<a class="headerlink" href="#8-1" title="Permanent link">&para;</a></h1>
+<ol>
+<li>提出假设：</li>
+</ol>
+<div class="arithmatex">\[
+H_0=\mu
+\]</div>
+<ol>
+<li>选取检验统计量（由于sigma已知，则）</li>
+</ol>
+<div class="arithmatex">\[
+U=\frac{\overline X-\mu_0}{\sigma/\sqrt n}\sim N(0,1)
+\]</div>
+<ol>
+<li>查表，找到分位点使得（alpha称为<strong>显著性水平</strong>）</li>
+</ol>
+<div class="arithmatex">\[
+P\{|U|&gt;u_{\alpha/2}\}=\alpha
+\]</div>
+<p>对应拒绝域
+$$
+W:|U|&gt;u_{\alpha/2}
+$$
+当由样本计算得到的实测值落入区域W则拒绝H0</p>
+<p><strong>第一类错误</strong>：显著性水平为犯下第一类错误的概率
+$$
+P(拒绝H_0|H_0为真)=\alpha
+$$
+<strong>第二类错误</strong>：降低需要扩大样本容量
+$$
+P(接受H_0|H_0为假)=\beta
+$$</p>
+<p><strong>单、双侧检验</strong></p>
+<h1 id="8-2">8-2 正态总体均值的假设检验<a class="headerlink" href="#8-2" title="Permanent link">&para;</a></h1>
+<p><strong>单个总体N(mu,sigma^2)均值mu的检验</strong>:</p>
+<p><strong>1.方差sigma^2已知</strong></p>
+<p>方差sigma^2已知时关于mu=mu0的检验问题。利用H0（mu=mu0）为真时下面统计量服从正态分布
+$$
+U=\frac{\overline X-\mu_0}{\sigma/\sqrt n}\sim N(0,1)
+$$
+确定拒绝域。
+$$
+拒绝域形式：\overline X-\mu_0\ge k
+$$</p>
+<p>比较正态总体N(mu,sigma^2)(方差已知)，对均值mu的两种检验问题
+$$
+H_0:\mu\le\mu_0,H_1:\mu&gt;\mu_0\
+(H_0:\mu=\mu_0,H_1:\mu&gt;\mu_0)
+$$
+拥有相同的拒绝域（单侧检验！）
+$$
+\frac{\overline X-\mu_0}{\sigma/\sqrt n}\ge z_\alpha
+$$
+<strong>2.方差sigma^2未知</strong>（t检验）
+$$
+t=\frac{\overline X-\mu_0}{s/\sqrt n}\sim t(n-1)\
+拒绝域形式：|t|=|\frac{\overline X-\mu_0}{s/\sqrt n}|\ge k
+$$
+拒绝域
+$$
+H_0:\mu=\mu_0,H_1:\mu\ne\mu_0\
+|t|=|\frac{\overline X-\mu_0}{s/\sqrt n}|\ge t_{\alpha/2}(n-1)
+$$
+<strong>两个正态总体均值差的检验</strong>（t检验）：</p>
+<p>两个正态总体的<strong>方差相等</strong>
+$$
+X_1,...,X_{n_1}\sim N(\mu_1,\sigma^2)\
+Y_1,...,Y_{n_2}\sim N(\mu_2,\sigma^2)\
+$$
+检验问题：
+$$
+H_0:\mu_1-\mu_2=\delta,H_1:\mu_1-\mu_2&gt;\delta
+$$
+检验统计量：
+$$
+t=\frac{(\overline x-\overline y)-\delta}{S_w\sqrt{\frac1{n_1}+\frac1{n_2}}}\sim t(n_1+n_2-2)\
+S_w<sup>2=\frac{(n_1-1)s_1</sup>2+(n_2-1)s_2^2}{n_1+n_2-2}
+$$
+拒绝域形式：
+$$
+t=\frac{(\overline x-\overline y)-\delta}{S_w\sqrt{\frac1{n_1}+\frac1{n_2}}}\ge k
+$$
+拒绝域：
+$$
+t=\frac{(\overline x-\overline y)-\delta}{S_w\sqrt{\frac1{n_1}+\frac1{n_2}}}\ge t_\alpha(n_1+n_2-2)
+$$</p>
+<ul>
+<li>两种正态总体方差均为已知时，可用u检验法来检验均值差</li>
+</ul>
+<h1 id="8-3">8-3 正态总体方差的假设检验<a class="headerlink" href="#8-3" title="Permanent link">&para;</a></h1>
+<p><strong>单个总体N(mu,sigma<sup>2)均值mu的检验(chi</sup>2检验)</strong>:
+$$
+H_0:\sigma<sup>2=\sigma_0</sup>2,H_1=\sigma<sup>2\ne\sigma_0</sup>2
+$$</p>
+<p>检验统计量：
+$$
+\chi<sup>2=\frac{(n-1)s</sup>2}{\sigma_0<sup>2}\sim\chi</sup>2(n-1)
+$$
+拒绝域形式：
+$$
+\chi<sup>2=\frac{(n-1)s</sup>2}{\sigma_0^2}\le k_1(or ~\ge k_2)
+$$
+拒绝域：
+$$
+\frac{(n-1)s<sup>2}{\sigma_0</sup>2}\le \chi^2_{1-\alpha/2}(n-1)\
+\frac{(n-1)s<sup>2}{\sigma_0</sup>2}\ge \chi^2_{\alpha/2}(n-1)\
+$$
+<strong>两个总体的方差相等检验(F检验)</strong>：</p>
+<p>x_k: N(mu1,sigma^2_1)</p>
+<p>y_k: N(mu2,sigma^2_2)
+$$
+H_0:\sigma_1<sup>2=\sigma_2</sup>2,H_1:\sigma_1<sup>2&gt;\sigma_2</sup>2\
+(H_0:\sigma_1<sup>2=\sigma_2</sup>2,H_1:\sigma_1<sup>2\ne\sigma_2</sup>2)
+$$
+检验统计量：
+$$
+\frac{s_1<sup>2/\sigma_1</sup>2}{s_2<sup>2/\sigma_2</sup>2}\sim F(n_1-1,n_2-1)\
+F=\frac{s_1<sup>2}{s_2</sup>2}\sim F(n_1-1,n_2-1)~(\sigma_1<sup>2=\sigma_2</sup>2)
+$$
+拒绝域形式：
+$$
+F=\frac{s_1<sup>2}{s_2</sup>2}\ge k\
+(F\ge k_1 ~or \le k_2)
+$$
+拒绝域：
+$$
+F=\frac{s_1<sup>2}{s_2</sup>2}\ge F_\alpha(n_1-1,n_2-1)\
+(\frac{s_1<sup>2}{s_2</sup>2}\ge F_{\alpha/2}(n_1-1,n_2-1),or~ F_{1-\alpha/2}(n_1-1,n_2-1))
+$$</p>
+<h1 id="8-8-p">8-8 假设检验问题的p值检验<a class="headerlink" href="#8-8-p" title="Permanent link">&para;</a></h1>
+<p>假设检验问题的p值是由检验统计量的样本观察值得出的原假设可被拒绝的最小显著性水平(alpha)
+$$
+Z=\frac{\overline X-\mu_0}{\sigma/\sqrt n}\ge z_\alpha\
+代入观察值得Z的观察值z_0\
+p值=P(Z\ge z_0)
+$$
+当p值小于等于alpha时(z0&gt;=z_alpha)，拒绝H0；</p>
+<p>当p值大于alpha时(z0&lt;z_alpha)，接受H0；</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 TML104
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

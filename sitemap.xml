@@ -2,82 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://tml104.github.io/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
+    </url>
+    <url>
+         <loc>https://tml104.github.io/2024%E8%85%BE%E8%AE%AF%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AD%A6%E5%A0%82/%E4%BD%9C%E4%B8%9A1%20-%20%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91UE5%20145d3bc8971f80f88e12d993a266d2ce/</loc>
+         <lastmod>2024-11-23</lastmod>
     </url>
     <url>
          <loc>https://tml104.github.io/%E5%AD%A6%E4%B8%8D%E6%9D%A5/C%2B%2B/Const/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
     </url>
     <url>
          <loc>https://tml104.github.io/%E5%AD%A6%E4%B8%8D%E6%9D%A5/C%2B%2B/Tuple/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
     </url>
     <url>
          <loc>https://tml104.github.io/%E5%AD%A6%E4%B8%8D%E6%9D%A5/C%2B%2B/%E5%88%9D%E5%A7%8B%E5%8C%96%EF%BC%8C%E5%A3%B0%E6%98%8E%EF%BC%8C%E5%AE%9A%E4%B9%89/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
     </url>
     <url>
          <loc>https://tml104.github.io/%E5%AD%A6%E4%B8%8D%E6%9D%A5/C%2B%2B/%E6%9D%82%E9%A1%B9/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
     </url>
     <url>
          <loc>https://tml104.github.io/%E5%AD%A6%E4%B8%8D%E6%9D%A5/C%2B%2B/%E8%87%AA%E5%A2%9E%E7%AC%A6%E5%8F%B7%28%2B%2B%29%E5%92%8C%E5%B7%A6%E5%8F%B3%E5%80%BC/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
+    </url>
+    <url>
+         <loc>https://tml104.github.io/%E5%AD%A6%E4%B8%8D%E6%9D%A5/EasyRL/C1/</loc>
+         <lastmod>2024-11-23</lastmod>
+    </url>
+    <url>
+         <loc>https://tml104.github.io/%E5%AD%A6%E4%B8%8D%E6%9D%A5/EasyRL/C2/</loc>
+         <lastmod>2024-11-23</lastmod>
+    </url>
+    <url>
+         <loc>https://tml104.github.io/%E5%AD%A6%E4%B8%8D%E6%9D%A5/GAMES104/L16/</loc>
+         <lastmod>2024-11-23</lastmod>
+    </url>
+    <url>
+         <loc>https://tml104.github.io/%E5%AD%A6%E4%B8%8D%E6%9D%A5/GAMES104/L18/</loc>
+         <lastmod>2024-11-23</lastmod>
+    </url>
+    <url>
+         <loc>https://tml104.github.io/%E5%AD%A6%E4%B8%8D%E6%9D%A5/GAMES105/L1/</loc>
+         <lastmod>2024-11-23</lastmod>
+    </url>
+    <url>
+         <loc>https://tml104.github.io/%E5%AD%A6%E4%B8%8D%E6%9D%A5/GAMES105/L2/</loc>
+         <lastmod>2024-11-23</lastmod>
     </url>
     <url>
          <loc>https://tml104.github.io/%E5%AD%A6%E4%B8%8D%E6%9D%A5/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%88%99/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
+    </url>
+    <url>
+         <loc>https://tml104.github.io/%E6%97%A7md%28%E8%87%AA%E7%94%A8%29/1-1%20%E9%9A%8F%E6%9C%BA%E8%AF%95%E9%AA%8C/</loc>
+         <lastmod>2024-11-23</lastmod>
     </url>
     <url>
          <loc>https://tml104.github.io/%E6%97%A7md%28%E8%87%AA%E7%94%A8%29/Git/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
     </url>
     <url>
          <loc>https://tml104.github.io/%E6%97%A7md%28%E8%87%AA%E7%94%A8%29/OI%E6%9D%82%E7%AC%94%E8%AE%B0/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
     </url>
     <url>
          <loc>https://tml104.github.io/%E6%97%A7md%28%E8%87%AA%E7%94%A8%29/STL%E6%95%B4%E7%90%86/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
     </url>
     <url>
          <loc>https://tml104.github.io/%E6%97%A7md%28%E8%87%AA%E7%94%A8%29/%E5%AD%A6%E4%B8%8D%E6%9D%A5Python/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
     </url>
     <url>
          <loc>https://tml104.github.io/%E6%97%A7md%28%E8%87%AA%E7%94%A8%29/%E8%87%AA%E5%88%B6Template/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
     </url>
     <url>
          <loc>https://tml104.github.io/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E8%A1%A5%E9%A2%98%E8%AE%B0%E5%BD%95/%E5%BE%AE%E8%BD%AF%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E7%AC%94%E8%AF%95/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
     </url>
     <url>
          <loc>https://tml104.github.io/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E8%A1%A5%E9%A2%98%E8%AE%B0%E5%BD%95/Codeforces/CF766/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
     </url>
     <url>
          <loc>https://tml104.github.io/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E8%A1%A5%E9%A2%98%E8%AE%B0%E5%BD%95/Codeforces/CF767/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
     </url>
     <url>
          <loc>https://tml104.github.io/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E8%A1%A5%E9%A2%98%E8%AE%B0%E5%BD%95/Codeforces/CFED121/</loc>
-         <lastmod>2022-03-05</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-11-23</lastmod>
     </url>
 </urlset>
