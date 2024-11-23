@@ -1458,7 +1458,7 @@
 <h1 id="1-ue5">作业1 - 源码编译UE5<a class="headerlink" href="#1-ue5" title="Permanent link">&para;</a></h1>
 <p>Created: November 22, 2024 1:48 AM</p>
 <h1 id="ue5">获取UE5源代码<a class="headerlink" href="#ue5" title="Permanent link">&para;</a></h1>
-<ol>
+<ul>
 <li>
 <p>首先，在Github上进行Epic帐号关联。随后即可访问UE5的仓库</p>
 <ol>
@@ -1470,68 +1470,68 @@
 <li>
 <p>fork到自己的仓库中，然后使用git clone将源代码拉下来</p>
 </li>
-</ol>
+</ul>
 <p><img alt="image.png" src="image.png" /></p>
-<ol>
+<ul>
 <li>在Windows下，运行UnrealEngine根目录下的Setup.bat以下载依赖</li>
-</ol>
+</ul>
 <p><img alt="image.png" src="image%201.png" /></p>
 <p><img alt="image.png" src="image%202.png" /></p>
-<ol>
+<ul>
 <li>
 <p>运行GenerateProjectFiles.bat以生成项目</p>
 </li>
 <li>
 <p>打开UE.sln，设置UE5为启动项目，并将活动解决方案配置为Development Editor。 然后生成项目。此处共花费4小时完成生成</p>
 </li>
-</ol>
+</ul>
 <p><img alt="image.png" src="image%203.png" /></p>
-<ol>
+<ul>
 <li>为了使用构建功能，还需要生成UnrealLightmass。在Program下生成UnrealLightMass</li>
-</ol>
+</ul>
 <p><img alt="image.png" src="image%204.png" /></p>
-<ol>
+<ul>
 <li>在VS中运行以启动虚幻编辑器</li>
-</ol>
+</ul>
 <p><img alt="image.png" src="image%205.png" /></p>
-<ol>
+<ul>
 <li>新建项目后将启动另一个新的Visual Studio界面。在此窗口中选择开始执行（不调试），然后UE编辑器就会打开这个项目</li>
-</ol>
+</ul>
 <p><img alt="image.png" src="image%206.png" /></p>
 <p><img alt="image.png" src="image%207.png" /></p>
-<ol>
+<ul>
 <li>此处对场景进行简单编辑，使得运行后玩家可以在场景中移动：<ol>
 <li>添加了一个球体</li>
 <li>添加了一个Character</li>
 </ol>
 </li>
-</ol>
+</ul>
 <p><img alt="image.png" src="image%208.png" /></p>
 <h1 id="pc">PC平台打包程序<a class="headerlink" href="#pc" title="Permanent link">&para;</a></h1>
 <p>由于我没有Android手机，所以这里我选择使用PC平台打包。</p>
 <p>参考内容：<a href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/preparing-unreal-engine-projects-for-release?application_version=5.2">https://dev.epicgames.com/documentation/zh-cn/unreal-engine/preparing-unreal-engine-projects-for-release?application_version=5.2</a></p>
-<ol>
+<ul>
 <li>修改“项目设置-地图和模式”中的默认地图和开始地图为新保存的地图</li>
-</ol>
+</ul>
 <p><img alt="image.png" src="image%209.png" /></p>
-<ol>
+<ul>
 <li>选择平台→项目启动程序</li>
-</ol>
+</ul>
 <p><img alt="image.png" src="image%2010.png" /></p>
-<ol>
+<ul>
 <li>添加自定义启动描述文件</li>
-</ol>
+</ul>
 <p><img alt="image.png" src="image%2011.png" /></p>
-<ol>
+<ul>
 <li>按照如下内容修改描述文件，返回后“启动此描述文件”以执行打包</li>
-</ol>
+</ul>
 <p><img alt="image.png" src="image%2012.png" /></p>
 <p><img alt="image.png" src="image%2013.png" /></p>
 <p><img alt="image.png" src="image%2014.png" /></p>
 <p><img alt="image.png" src="image%2015.png" /></p>
-<ol>
+<ul>
 <li>打开./Saved/StagedBuilds下对应打包平台的文件夹，其中就包含已经打包的游戏。</li>
-</ol>
+</ul>
 <p><img alt="image.png" src="image%2016.png" /></p>
 <p><img alt="image.png" src="image%2017.png" /></p>
 
